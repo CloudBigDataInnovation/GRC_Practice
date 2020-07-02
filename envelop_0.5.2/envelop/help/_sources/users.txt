@@ -1,0 +1,11 @@
+.. index:: Users and Permissions
+
+Users and Permissions
+=========================
+
+There is only one type of user  (Role) for this tool; the Auditor. The auditor has access to all aspects of the tool except the administration panel.
+
+There is a superuser called 'admin' that is created while the tool is being installed. Please ask your system administrator who installed the tool to help you get to the administration panel. 
+
+.. note:: Users can only be added via the administration panel.
+

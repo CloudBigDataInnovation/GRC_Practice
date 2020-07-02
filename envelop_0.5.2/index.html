@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+#{% load staticfiles %}
+{% load static %}
+{% block page_title %}Audits List{% endblock %}
+{% block header_html %}
+<!-- script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script -->
+<script type="text/javascript" src="{% static "js/Chart.min.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+
+{% csrf_token %}
+<div class="col-md-3 text-center">
+<a href="{% url 'audits:audit_create' %}" class="btn btn-info btn-lg">Create a new Audit</a> <br>
+</div>
+<div class="col-md-4">
+<h2>Audit List</h2>
+{% if all_audits %}
+    <ul>
+    {% for audit in all_audits %}
+        <li><a href="{% url 'audits:audit' audit.id %}"><h4>{{ audit.title }}</h4></a>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No audits are available.</p>
+{% endif %}
+</div>
+{#% if '/audits' in request.path %#}
+<div class="col-md-5">
+<canvas id="myChart" width="400" height="400"></canvas>
+</div>
+<script>
+var data = {
+    labels: [{{ x.0 }}, {{ x.1 }}, {{ x.2 }}],
+    datasets: [
+        {
+            label: "My First dataset",
+            fillColor: "rgba(220,220,220,0.5)",
+            strokeColor: "rgba(220,220,220,0.8)",
+            highlightFill: "rgba(220,220,220,0.75)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [{{ y.0.0 }}, {{ y.1.0 }}, {{ y.2.0 }}]
+        },
+        {
+            label: "My Second dataset",
+            fillColor: "rgba(151,187,205,0.5)",
+            strokeColor: "rgba(151,187,205,0.8)",
+            highlightFill: "rgba(151,187,205,0.75)",
+            highlightStroke: "rgba(151,187,205,1)",
+            data: [{{ y.0.1 }}, {{ y.1.1 }}, {{ y.2.1 }}]
+        },
+        {
+            label: "My Third dataset",
+            fillColor: "rgba(101,137,175,0.5)",
+            strokeColor: "rgba(101,137,175,0.8)",
+            highlightFill: "rgba(101,137,175,0.75)",
+            highlightStroke: "rgba(101,137,175,1)",
+            data: [{{ y.0.2 }}, {{ y.1.2 }}, {{ y.2.2 }}]
+        }
+    ]
+};
+var options = {
+    //Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
+    scaleBeginAtZero : true,
+
+    //Boolean - Whether grid lines are shown across the chart
+    scaleShowGridLines : true,
+
+    //String - Colour of the grid lines
+    scaleGridLineColor : "rgba(0,0,0,.05)",
+
+    //Number - Width of the grid lines
+    scaleGridLineWidth : 1,
+
+    //Boolean - Whether to show horizontal lines (except X axis)
+    scaleShowHorizontalLines: true,
+
+    //Boolean - Whether to show vertical lines (except Y axis)
+    scaleShowVerticalLines: true,
+
+    //Boolean - If there is a stroke on each bar
+    barShowStroke : true,
+
+    //Number - Pixel width of the bar stroke
+    barStrokeWidth : 2,
+
+    //Number - Spacing between each of the X value sets
+    barValueSpacing : 5,
+
+    //Number - Spacing between data sets within X values
+    barDatasetSpacing : 1,
+
+}
+var ctx = document.getElementById("myChart").getContext("2d");
+var myBarChart = new Chart(ctx).Bar(data, options);
+</script>
+{#% endif %#}
+{% endblock %}

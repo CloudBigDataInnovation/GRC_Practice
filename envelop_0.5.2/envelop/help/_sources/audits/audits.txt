@@ -1,0 +1,20 @@
+.. index:: Audits
+
+Audits
+===========
+
+Contents:
+
+.. toctree::
+
+   process
+   objective
+   risk
+   control
+   test
+   finding
+
+The audits app is a module that is foundational to the GRC Envelop tool
+
+
+

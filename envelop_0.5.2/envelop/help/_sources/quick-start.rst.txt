@@ -1,0 +1,19 @@
+Quick Start
+===============
+
+#. Click on create an audit link
+#. Enter the basic details:
+   
+   *  Title, Description
+   *  Status
+   *  Date (start and end of the audit)
+   *  Fiscal year
+
+#. Click on save
+#. Click on Add/Modify manually button
+
+   *  Add :doc:`audits/process`, :doc:`audits/objective`, :doc:`audits/risk`, :doc:`audits/control`, and :doc:`audits/test`
+   *  Click on audit title to return to Audit page
+
+#. Click on Execute button to start field work. You can *not* make changes to the process, objective, risk control or test. 
+

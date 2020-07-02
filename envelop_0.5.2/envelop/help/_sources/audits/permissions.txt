@@ -1,0 +1,4 @@
+Permissions
+=======================================
+
+The permissions are set according to the users types. 

@@ -1,0 +1,32 @@
+.. index:: Executing an Audit
+
+Executing an Audit
+==========================
+
+.. note: If the 'Status' is Closed, then you will not be allowed to execute an audit.
+
+.. centered:: The main difference between :doc:`manage-audit` and Executing an Audit is that you can *not* change the content of process, objective, risk, control and test. While executing an audit, you can change test results, test description, and you can create findings.
+
+Views
++++++++++++++
+
+There are five views available while executing an audit:
+
+* **Process**: lists all the processes within the audit. You will have to expand each process to get to its child objects such as objectives.
+* **Objective**: lists all the objectives within the audit. You will have to expand each objective to get to its child objects such as risks, controls and tests.
+* **Risk**: lists all the risks within the audit. You will have to expand each risk to get to its child objects such as controls and tests.
+* **Control**: lists all the controls within the audit. You will have to expand each control to get to its child objects such as tests.
+* **Test**: lists all the tests within the audit. You will have to expand each test to get to its child objects such as findings.
+
+Conducting an Audit
++++++++++++++++++++++++++
+
+While you are auditing, select the test you wish to execute. 
+
+* One quick way is to change the view to test and then click on the test you wish, which will bring up the test details on the right hand panel.
+* If there are too many tests, then select a higher view, such as control or risk, and then expand the control or risk to find your test.
+
+Once you see the test details appear on the right hand panel, you may enter your test results and test result description. You may also create findings for your tests.
+
+.. note:: Test result is Failed by default. 
+

@@ -1,0 +1,3 @@
+
+.. warning::
+   Workpapers store the files that you upload on the server and therefore consumes disk space. The space consumed by a file is related to the size of the file. Be careful not to run out of server space by uploading extremely large files.

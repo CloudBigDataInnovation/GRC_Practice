@@ -1,0 +1,24 @@
+.. index:: Test
+
+Test
+==========
+
+A test may be associated with many controls (many to many relation). When creating a test, it has to be associated to atleast one :doc:`control`.
+
+Each test can have many :doc:`finding`.
+
+A test has five basic aspects:
+
+* Title
+   This field has a maximum of 200 characters.
+* Reference
+   This field has a maximum of 200 characters.
+* Description
+   This is a regular text field where there is no limit to the number of characters.
+* Control
+   A test has to be associated to atleast one :doc:`control`.
+* Work papers
+   Work papers are attachments or file uploads where you can keep files associated to a test. 
+
+.. include:: file_size_warning.rst
+

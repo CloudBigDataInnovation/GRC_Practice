@@ -1,0 +1,15 @@
+Users
+=======================================
+
+There are 4 types of users (Roles):
+
+* Auditors
+* Audit Managers
+* Risk Managers
+* Internal Business Users
+* External Viewer
+
+.. seealso::
+   The permissions are different for each of these user types
+
+

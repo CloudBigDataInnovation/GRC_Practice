@@ -1,0 +1,17 @@
+.. index:: Finding
+
+Finding
+============
+
+A finding is associated with one :doc:`test`. 
+
+A finding has three basic aspects:
+
+* Title
+   This field has a maximum of 200 characters.
+* Description
+   This is a regular text field where there is no limit to the number of characters.
+* Work papers
+   Work papers are attachments or file uploads where you can keep files associated to a finding. 
+
+.. include:: file_size_warning.rst

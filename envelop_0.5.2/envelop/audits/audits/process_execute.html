@@ -1,0 +1,57 @@
+
+
+    <div class="col-md-6">
+
+            <div class="panel-group" id="accordion1">
+                {% if object_list %}
+                {% for process in object_list %}
+
+<!--
+Modal starts
+-->
+                <div class="modal fade" id="pr_{{ process.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title process-title-{{ process.id }}" id="myModalLabel">{{ process.title }}</h4>
+                      </div>
+                      <div class="modal-body">
+                        {{ process.ref_id }}
+                      </div>
+                      <div class="modal-body process-desc-{{ process.id }}">
+                        {{ process.desc }}
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!--
+Modal Ends
+-->
+
+                <div class="panel panel-default" id="prr_{{ process.id }}">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a id="process_{{process.id}}" data-toggle="collapse" data-parent="#accordion1" href="#pr_{{ process.id }}_collapse" onclick="get_objectives('process_'+{{process.id}}, {{process.id}})">+</a> <a href="javascript:;" {% if management %}onclick="loadAjaxProcessForm({{ audit_id }}, {{ process.id }})" {% else %} data-toggle="modal" data-target="#pr_{{ process.id }}" {% endif %} class="process-title-{{ process.id }}">{{ process.title }}</a>
+                        </h4>
+                    </div>
+                    <div id="pr_{{ process.id }}_collapse" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <div class="panel-group" id="acc_process_{{process.id}}">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                
+                <div>Total: {{ object_list.count}} processes</div>
+            {% endif %}
+            </div>
+
+
+        </div>

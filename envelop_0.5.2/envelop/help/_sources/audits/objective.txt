@@ -1,0 +1,22 @@
+.. index:: Objective
+
+Objective
+==============
+
+Objective may be associated with many processes (many to many relation). When creating an objective, it has to be associated to atleast one :doc:`process`.
+
+Each objective can have many :doc:`risk`.
+
+An objective has four basic aspects:
+
+* Title
+   This field has a maximum of 200 characters.
+* Description
+   This is a regular text field where there is no limit to the number of characters.
+* Process
+   An objective has to be associated to atleast one :doc:`process`.
+* Work papers
+   Work papers are attachments or file uploads where you can keep files associated to an objective. 
+
+.. include:: file_size_warning.rst
+

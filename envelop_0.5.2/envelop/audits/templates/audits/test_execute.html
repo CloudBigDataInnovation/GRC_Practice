@@ -1,0 +1,22 @@
+{% if object_list %}
+<div class="col-md-6">
+    <div class="panel-group">
+    {% for obj in object_list %}
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a id="pro_{{ process_id }}_obj_{{ objective_id }}_risk_{{ risk_id }}_ctrl_{{control_id}}_test_{{ obj.id }}" data-toggle="collapse" data-parent="#acc_pro_{{ process_id }}_obj_{{ objective_id }}_risk_{{risk_id}}_ctrl_{{ control_id }}" href="#pr_{{process_id}}_obj_{{ objective_id }}_rs_{{risk_id}}_ct_{{control_id}}_test_{{obj.id}}_collapse" onclick="get_findings('pro_'+{{ process_id }}+'_obj_'+{{ objective_id }}+'_risk_'+{{ risk_id }}+'_ctrl_'+{{control_id}}+'_test_'+{{ obj.id }}, {{ obj.id }}, {{ process_id }}, {{ objective_id }}, {{ risk_id }}, {{control_id}})">+</a>
+                <a href="javascript:void(0);" onclick="loadAjaxTestForm({{ obj.id }});">{{ obj.title }}</a>
+            </h4>
+        </div>
+        <div id="pr_{{process_id}}_obj_{{objective_id}}_rs_{{risk_id}}_ct_{{control_id}}_test_{{ obj.id }}_collapse" class="panel-collapse collapse">
+            <div class="panel-body">
+                <div class="panel-group test_{{ obj.id }}" id="acc_pro_{{ process_id }}_obj_{{ objective_id }}_risk_{{risk_id}}_ctrl_{{control_id}}_test_{{ obj.id }}"></div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+    <div>Total: {{ object_list.count}} tests</div>
+</div>
+{% endif %}

@@ -1,0 +1,17 @@
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a id="process_{{process.id}}" data-toggle="collapse" data-parent="#accordion1" href="#pr_{{ process.id }}_collapse" onclick="get_objectives('process_'+{{process.id}}, {{process.id}})">+
+            </a><a href="javascript:void(0);" onclick="loadAjaxProcessForm({{ audit_id }}, {{ process.id }})" class="process-title-{{ process.id }}">{{ process.title }}</a>
+        </h4>
+    </div>
+    <div id="pr_{{ process.id }}_collapse" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <div class="panel-group" id="acc_process_{{process.id}}">
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,136 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Executing an Audit &#8212; Envelop (Community Version) 0.5.2 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Audit Report" href="report-audit.html" />
+    <link rel="prev" title="Creating and Managing an Audit" href="manage-audit.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="report-audit.html" title="Audit Report"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="manage-audit.html" title="Creating and Managing an Audit"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Envelop (Community Version) 0.5.2 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Executing an Audit</a><ul>
+<li><a class="reference internal" href="#views">Views</a></li>
+<li><a class="reference internal" href="#conducting-an-audit">Conducting an Audit</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="manage-audit.html"
+                        title="previous chapter">Creating and Managing an Audit</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="report-audit.html"
+                        title="next chapter">Audit Report</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/execute-audit.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="executing-an-audit">
+<span id="index-0"></span><h1>Executing an Audit<a class="headerlink" href="#executing-an-audit" title="Permalink to this headline">¶</a></h1>
+<p class="centered">
+<strong>The main difference between <a class="reference internal" href="manage-audit.html"><span class="doc">Creating and Managing an Audit</span></a> and Executing an Audit is that you can <em>not</em> change the content of process, objective, risk, control and test. While executing an audit, you can change test results, test description, and you can create findings.</strong></p><div class="section" id="views">
+<h2>Views<a class="headerlink" href="#views" title="Permalink to this headline">¶</a></h2>
+<p>There are five views available while executing an audit:</p>
+<ul class="simple">
+<li><strong>Process</strong>: lists all the processes within the audit. You will have to expand each process to get to its child objects such as objectives.</li>
+<li><strong>Objective</strong>: lists all the objectives within the audit. You will have to expand each objective to get to its child objects such as risks, controls and tests.</li>
+<li><strong>Risk</strong>: lists all the risks within the audit. You will have to expand each risk to get to its child objects such as controls and tests.</li>
+<li><strong>Control</strong>: lists all the controls within the audit. You will have to expand each control to get to its child objects such as tests.</li>
+<li><strong>Test</strong>: lists all the tests within the audit. You will have to expand each test to get to its child objects such as findings.</li>
+</ul>
+</div>
+<div class="section" id="conducting-an-audit">
+<h2>Conducting an Audit<a class="headerlink" href="#conducting-an-audit" title="Permalink to this headline">¶</a></h2>
+<p>While you are auditing, select the test you wish to execute.</p>
+<ul class="simple">
+<li>One quick way is to change the view to test and then click on the test you wish, which will bring up the test details on the right hand panel.</li>
+<li>If there are too many tests, then select a higher view, such as control or risk, and then expand the control or risk to find your test.</li>
+</ul>
+<p>Once you see the test details appear on the right hand panel, you may enter your test results and test result description. You may also create findings for your tests.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Test result is Failed by default.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="report-audit.html" title="Audit Report"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="manage-audit.html" title="Creating and Managing an Audit"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Envelop (Community Version) 0.5.2 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Arambankudyil Consultancy.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.2.
+    </div>
+  </body>
+</html>

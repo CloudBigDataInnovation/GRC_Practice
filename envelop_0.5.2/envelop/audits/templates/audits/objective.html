@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Objective</h2>
+
+<form method="POST" class="post-form">
+{% csrf_token %}
+          {% if messages %} 
+            {% for message in messages %} 
+              {{ message }} 
+            {% endfor %} 
+          {% endif %}
+          
+	{{ form.as_p }}
+    <button type="submit" class="save btn btn-default">Save</button><br>
+    <a href="{% url 'audits:objective_create' %}">Create another Objective</a> | <a href="{% url 'audits:risk_create' %}">Create a Risk</a>
+    </form>
+{% endblock %}

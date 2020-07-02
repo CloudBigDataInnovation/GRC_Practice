@@ -1,0 +1,99 @@
+.. index:: Installation
+
+Installation
+===========================
+
+The following instructions are to install Envelop on a local machine using Linux Debian 8 or higher.
+Install the following (for example, using apt-get install command) :
+
+#. python3
+#. python3-pip
+#. postgres DB (if you are not using SQLite3)
+
+   .. note:: If this is the first time you are installing Envelop, then it is advisable to use SQLite3 database
+
+#. python3-psycopg2 (not required for SQLite3)
+#. create the DB and user (not required for SQLite3)
+
+   ::
+
+	sudo su - postgres
+	psql
+	CREATE DATABASE envelop;
+	CREATE USER myprojectuser WITH PASSWORD 'password';
+	ALTER ROLE myprojectuser SET client_encoding TO 'utf8';
+	ALTER ROLE myprojectuser SET default_transaction_isolation TO 'read committed';
+	ALTER ROLE myprojectuser SET timezone TO 'UTC';
+	GRANT ALL PRIVILEGES ON DATABASE envelop TO myprojectuser;
+	\q
+
+#. Unzip or Untar the file you downloaded from http://www.grcenvelop.com/download to a folder of your choice.
+
+   .. note:: Now using pip3 install the following (you may also create a virtual environment and install these in there)
+
+#. Install required additional software
+
+   ::
+
+     pip3 install -r /path/to/folder/requirements.txt
+
+
+Settings and permissions
+++++++++++++++++++++++++
+
+#. give read execute /path/to/folder/envelop/wsgi.py (make sure the webserver user can read and execute)
+#. configure /path/to/folder/envelop/settings.py (No need to change if you are using SQLite3)
+
+   ::
+
+      DATABASES = {
+          'default': {
+              'ENGINE': 'django.db.backends.postgresql',
+              'NAME': 'envelop',
+              'USER': 'myprojectuser',
+              'PASSWORD': 'password',
+              'HOST': '127.0.0.1',
+              'PORT': '5432',
+          }
+      }
+
+
+#. go to /path/to/folder
+#. create directory called "media" (make sure that the webserver can read and write to this folder)
+
+
+Initialising
+++++++++++++++++++++++++
+
+#. Create the data tables in the database
+
+   ::
+
+     python3 manage.py makemigrations
+     python3 manage.py migrate
+
+
+#. Create the superuser to login initially
+
+   ::
+
+     python3 manage.py createsuperuser
+
+#. Start the Envelop application
+
+   ::
+
+     python3 manage.py runserver
+
+#. Point your web browser to http://127.0.0.1:8000 and login using the superuser credentials
+#. If you'd like to load some initial data
+
+   ::
+
+     python3 manage.py loaddata audits/fixtures/initial_data.json
+
+
+.. warning:: Keep in mind that this installation is not to be used in production! 
+
+.. centered:: Contact hello@grcenvelop.com for getting support.
+

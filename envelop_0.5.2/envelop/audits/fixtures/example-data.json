@@ -1,0 +1,2534 @@
+[
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "audits",
+        "model": "attachment"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "audits",
+        "model": "audit"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "audits",
+        "model": "process"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "audits",
+        "model": "objective"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "audits",
+        "model": "risk"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "audits",
+        "model": "control"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+        "app_label": "audits",
+        "model": "test"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+        "app_label": "audits",
+        "model": "finding"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+        "app_label": "audits",
+        "model": "action"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+        "app_label": "audits",
+        "model": "auditors"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "007yjlez60zc7cekceqrcgt4to84y3jv",
+    "fields": {
+        "session_data": "NmJlZDdiYmZmM2Q5YWZjODNmOGU2NzFkODM3MWFkMjY1MWQxYmVhZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJkNGFhOTVkZGZhOTRhNzdjYzhhNGY5MTU1Yjg3ODdmZTU1M2VjNjdjIn0=",
+        "expire_date": "2018-12-24T20:23:27.374Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "28f47t2s874bcmgk9bwrv7gn4mdf5uur",
+    "fields": {
+        "session_data": "Yzk3ZDA2NDgwYjY4NGViMTUyOWZjNTU3ZDRkNzRiNTVhOGQ3YWFmNjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZDRhYTk1ZGRmYTk0YTc3Y2M4YTRmOTE1NWI4Nzg3ZmU1NTNlYzY3YyIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2018-12-18T01:24:57.918Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "2bo269o6hulyqeezz97wlocwmnqpm3ri",
+    "fields": {
+        "session_data": "OGU0YWU2ZTE5MzM0ZGI4NmJjOTE4YTI3Y2E2ZmNkOWEzOGMyZmY0Mzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9oYXNoIjoiZDRhYTk1ZGRmYTk0YTc3Y2M4YTRmOTE1NWI4Nzg3ZmU1NTNlYzY3YyIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=",
+        "expire_date": "2018-12-23T22:23:45.627Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "3me1ed0kqc03xsqmvg2zlf2iqb1tmpq3",
+    "fields": {
+        "session_data": "Yzk3ZDA2NDgwYjY4NGViMTUyOWZjNTU3ZDRkNzRiNTVhOGQ3YWFmNjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZDRhYTk1ZGRmYTk0YTc3Y2M4YTRmOTE1NWI4Nzg3ZmU1NTNlYzY3YyIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2018-12-18T14:07:10.941Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "49qrelbn5xj4e6f20wpom4vhv63ulaid",
+    "fields": {
+        "session_data": "ZWFlYmIyNjE3YTgxMDFmZTA0YzJmYmRiY2NhNTNlZTY4NGViNWFlYjp7Il9hdXRoX3VzZXJfaGFzaCI6ImQ0YWE5NWRkZmE5NGE3N2NjOGE0ZjkxNTViODc4N2ZlNTUzZWM2N2MiLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=",
+        "expire_date": "2018-12-22T06:34:31.511Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "63obg7ezub5f94x6q177j4zfeboultaj",
+    "fields": {
+        "session_data": "NmJlZDdiYmZmM2Q5YWZjODNmOGU2NzFkODM3MWFkMjY1MWQxYmVhZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJkNGFhOTVkZGZhOTRhNzdjYzhhNGY5MTU1Yjg3ODdmZTU1M2VjNjdjIn0=",
+        "expire_date": "2018-12-24T20:08:14.453Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "6l3f08nq295xr3acfxfqgr46ia68880g",
+    "fields": {
+        "session_data": "Yzk3ZDA2NDgwYjY4NGViMTUyOWZjNTU3ZDRkNzRiNTVhOGQ3YWFmNjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZDRhYTk1ZGRmYTk0YTc3Y2M4YTRmOTE1NWI4Nzg3ZmU1NTNlYzY3YyIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2018-12-20T23:40:57.480Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "76xru02wxwvchw5vnc4qjqtqbr6oj60q",
+    "fields": {
+        "session_data": "NmJlZDdiYmZmM2Q5YWZjODNmOGU2NzFkODM3MWFkMjY1MWQxYmVhZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJkNGFhOTVkZGZhOTRhNzdjYzhhNGY5MTU1Yjg3ODdmZTU1M2VjNjdjIn0=",
+        "expire_date": "2018-12-28T17:03:33.324Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "7in92xfb1binna8f12nwcibnka4ayh53",
+    "fields": {
+        "session_data": "Yzk3ZDA2NDgwYjY4NGViMTUyOWZjNTU3ZDRkNzRiNTVhOGQ3YWFmNjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZDRhYTk1ZGRmYTk0YTc3Y2M4YTRmOTE1NWI4Nzg3ZmU1NTNlYzY3YyIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2018-12-27T09:36:14.164Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "7zf4vlxohfkzmmrjkn94rtnlfpq4mpzy",
+    "fields": {
+        "session_data": "Yzk3ZDA2NDgwYjY4NGViMTUyOWZjNTU3ZDRkNzRiNTVhOGQ3YWFmNjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZDRhYTk1ZGRmYTk0YTc3Y2M4YTRmOTE1NWI4Nzg3ZmU1NTNlYzY3YyIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2018-12-17T18:08:33.191Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "8j0cgorpdzd6ruu0etgs9hkopg0jgk2z",
+    "fields": {
+        "session_data": "NmJlZDdiYmZmM2Q5YWZjODNmOGU2NzFkODM3MWFkMjY1MWQxYmVhZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJkNGFhOTVkZGZhOTRhNzdjYzhhNGY5MTU1Yjg3ODdmZTU1M2VjNjdjIn0=",
+        "expire_date": "2018-12-25T09:18:06.282Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ak3jj388r2kc8fk0co8c8wkoim9p6eh8",
+    "fields": {
+        "session_data": "Yzk3ZDA2NDgwYjY4NGViMTUyOWZjNTU3ZDRkNzRiNTVhOGQ3YWFmNjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZDRhYTk1ZGRmYTk0YTc3Y2M4YTRmOTE1NWI4Nzg3ZmU1NTNlYzY3YyIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2018-12-18T22:03:09.057Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "b67rvagermo9q4kpj1atanzbyundkess",
+    "fields": {
+        "session_data": "Yzk3ZDA2NDgwYjY4NGViMTUyOWZjNTU3ZDRkNzRiNTVhOGQ3YWFmNjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZDRhYTk1ZGRmYTk0YTc3Y2M4YTRmOTE1NWI4Nzg3ZmU1NTNlYzY3YyIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2018-12-19T14:04:53.917Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ct8yqfnqvvun3q6p0kqwibpfh827epij",
+    "fields": {
+        "session_data": "Yzk3ZDA2NDgwYjY4NGViMTUyOWZjNTU3ZDRkNzRiNTVhOGQ3YWFmNjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZDRhYTk1ZGRmYTk0YTc3Y2M4YTRmOTE1NWI4Nzg3ZmU1NTNlYzY3YyIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2018-12-17T07:52:14.910Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "dd7k5vmt2jxrces29j76s4fklggquu7j",
+    "fields": {
+        "session_data": "NmJlZDdiYmZmM2Q5YWZjODNmOGU2NzFkODM3MWFkMjY1MWQxYmVhZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJkNGFhOTVkZGZhOTRhNzdjYzhhNGY5MTU1Yjg3ODdmZTU1M2VjNjdjIn0=",
+        "expire_date": "2018-12-28T22:22:33.621Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "eowrgahnxqc10ox1yjmqon9ozylemk7l",
+    "fields": {
+        "session_data": "NmJlZDdiYmZmM2Q5YWZjODNmOGU2NzFkODM3MWFkMjY1MWQxYmVhZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJkNGFhOTVkZGZhOTRhNzdjYzhhNGY5MTU1Yjg3ODdmZTU1M2VjNjdjIn0=",
+        "expire_date": "2018-12-28T22:44:57.627Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "flv23d6tu2ifb556l640pdzpu9fi9cz4",
+    "fields": {
+        "session_data": "NmJlZDdiYmZmM2Q5YWZjODNmOGU2NzFkODM3MWFkMjY1MWQxYmVhZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJkNGFhOTVkZGZhOTRhNzdjYzhhNGY5MTU1Yjg3ODdmZTU1M2VjNjdjIn0=",
+        "expire_date": "2018-12-24T20:44:09.990Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "g66gv7hw8ynlwpcu0w77z7ifo2xlrzaw",
+    "fields": {
+        "session_data": "Yzk3ZDA2NDgwYjY4NGViMTUyOWZjNTU3ZDRkNzRiNTVhOGQ3YWFmNjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZDRhYTk1ZGRmYTk0YTc3Y2M4YTRmOTE1NWI4Nzg3ZmU1NTNlYzY3YyIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2018-12-20T22:30:54.060Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "mckeh5a3wywr5keuq5a48co22hvu4kik",
+    "fields": {
+        "session_data": "Yzk3ZDA2NDgwYjY4NGViMTUyOWZjNTU3ZDRkNzRiNTVhOGQ3YWFmNjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZDRhYTk1ZGRmYTk0YTc3Y2M4YTRmOTE1NWI4Nzg3ZmU1NTNlYzY3YyIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2018-12-17T12:36:55.789Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "mtzwmryur053mb8aa46vaz8imr7x9mal",
+    "fields": {
+        "session_data": "YjBhODY0NzBlYTJiY2MyZmQ4YWVlNTNhMzdjMDA1ZjM3ZDQwZThlZTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiJkNGFhOTVkZGZhOTRhNzdjYzhhNGY5MTU1Yjg3ODdmZTU1M2VjNjdjIn0=",
+        "expire_date": "2018-12-26T13:32:41.699Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "nci3pdke5zokp2nycs88o0jjfq6zo2pf",
+    "fields": {
+        "session_data": "Yzk3ZDA2NDgwYjY4NGViMTUyOWZjNTU3ZDRkNzRiNTVhOGQ3YWFmNjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZDRhYTk1ZGRmYTk0YTc3Y2M4YTRmOTE1NWI4Nzg3ZmU1NTNlYzY3YyIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2018-12-27T17:10:38.476Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ng41ewtr4qy2qmmuf7g0q7jjw8h636a7",
+    "fields": {
+        "session_data": "NmJlZDdiYmZmM2Q5YWZjODNmOGU2NzFkODM3MWFkMjY1MWQxYmVhZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJkNGFhOTVkZGZhOTRhNzdjYzhhNGY5MTU1Yjg3ODdmZTU1M2VjNjdjIn0=",
+        "expire_date": "2018-12-24T20:18:16.423Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "o8mpuylgt3nvigddf1hw7smbwmgstaop",
+    "fields": {
+        "session_data": "Yzk3ZDA2NDgwYjY4NGViMTUyOWZjNTU3ZDRkNzRiNTVhOGQ3YWFmNjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZDRhYTk1ZGRmYTk0YTc3Y2M4YTRmOTE1NWI4Nzg3ZmU1NTNlYzY3YyIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2018-12-18T08:16:00.202Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ocv3ow2futci2bjw6uudxyofqxsyfue0",
+    "fields": {
+        "session_data": "Yzk3ZDA2NDgwYjY4NGViMTUyOWZjNTU3ZDRkNzRiNTVhOGQ3YWFmNjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZDRhYTk1ZGRmYTk0YTc3Y2M4YTRmOTE1NWI4Nzg3ZmU1NTNlYzY3YyIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2018-12-29T05:22:30.970Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "oy8p4xkee4xmpwyjdgcrqrdq32dmwmke",
+    "fields": {
+        "session_data": "Yzk3ZDA2NDgwYjY4NGViMTUyOWZjNTU3ZDRkNzRiNTVhOGQ3YWFmNjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZDRhYTk1ZGRmYTk0YTc3Y2M4YTRmOTE1NWI4Nzg3ZmU1NTNlYzY3YyIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2018-12-19T04:39:27.712Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "pnwwalwhanupttv5u7cr77c2nti8ngsx",
+    "fields": {
+        "session_data": "NmJlZDdiYmZmM2Q5YWZjODNmOGU2NzFkODM3MWFkMjY1MWQxYmVhZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJkNGFhOTVkZGZhOTRhNzdjYzhhNGY5MTU1Yjg3ODdmZTU1M2VjNjdjIn0=",
+        "expire_date": "2018-12-24T20:10:09.140Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "qpfdr1icnohs8ul288la7w1yvf57d5ag",
+    "fields": {
+        "session_data": "OGU0YWU2ZTE5MzM0ZGI4NmJjOTE4YTI3Y2E2ZmNkOWEzOGMyZmY0Mzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9oYXNoIjoiZDRhYTk1ZGRmYTk0YTc3Y2M4YTRmOTE1NWI4Nzg3ZmU1NTNlYzY3YyIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=",
+        "expire_date": "2018-12-24T00:20:24.536Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "rmy87fblt0mjdpqlflg3zwoltscj9rsv",
+    "fields": {
+        "session_data": "Yzk3ZDA2NDgwYjY4NGViMTUyOWZjNTU3ZDRkNzRiNTVhOGQ3YWFmNjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZDRhYTk1ZGRmYTk0YTc3Y2M4YTRmOTE1NWI4Nzg3ZmU1NTNlYzY3YyIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2018-12-27T10:57:12.066Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "t8gufkjr3brsau8e9kubieye3k7tlp19",
+    "fields": {
+        "session_data": "NmJlZDdiYmZmM2Q5YWZjODNmOGU2NzFkODM3MWFkMjY1MWQxYmVhZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJkNGFhOTVkZGZhOTRhNzdjYzhhNGY5MTU1Yjg3ODdmZTU1M2VjNjdjIn0=",
+        "expire_date": "2018-12-24T20:09:17.085Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "u1dy0jrz3nq50moegam1v5ubtr0wbypu",
+    "fields": {
+        "session_data": "Yzk3ZDA2NDgwYjY4NGViMTUyOWZjNTU3ZDRkNzRiNTVhOGQ3YWFmNjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZDRhYTk1ZGRmYTk0YTc3Y2M4YTRmOTE1NWI4Nzg3ZmU1NTNlYzY3YyIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2018-12-18T14:41:24.827Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "x9supajx75oq87hvrgmanx1mfaqyuplk",
+    "fields": {
+        "session_data": "NmJlZDdiYmZmM2Q5YWZjODNmOGU2NzFkODM3MWFkMjY1MWQxYmVhZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJkNGFhOTVkZGZhOTRhNzdjYzhhNGY5MTU1Yjg3ODdmZTU1M2VjNjdjIn0=",
+        "expire_date": "2018-12-24T20:21:17.629Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "zzquydv1jkwjusyzphk8nepy342mfnhx",
+    "fields": {
+        "session_data": "NmJlZDdiYmZmM2Q5YWZjODNmOGU2NzFkODM3MWFkMjY1MWQxYmVhZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJkNGFhOTVkZGZhOTRhNzdjYzhhNGY5MTU1Yjg3ODdmZTU1M2VjNjdjIn0=",
+        "expire_date": "2018-12-24T10:27:29.684Z"
+    }
+},
+{
+    "model": "audits.attachment",
+    "pk": 76,
+    "fields": {
+        "workpaper": "attachments/7744.jpg",
+        "filename": "7744.jpg",
+        "content_type": 14,
+        "object_id": 28
+    }
+},
+{
+    "model": "audits.attachment",
+    "pk": 77,
+    "fields": {
+        "workpaper": "attachments/7744_tmgLoA4.jpg",
+        "filename": "7744.jpg",
+        "content_type": 14,
+        "object_id": 29
+    }
+},
+{
+    "model": "audits.attachment",
+    "pk": 83,
+    "fields": {
+        "workpaper": "attachments/ACPL-profile.pdf",
+        "filename": "ACPL-profile.pdf",
+        "content_type": 8,
+        "object_id": 78
+    }
+},
+{
+    "model": "audits.attachment",
+    "pk": 89,
+    "fields": {
+        "workpaper": "attachments/55779.png",
+        "filename": "55779.png",
+        "content_type": 10,
+        "object_id": 95
+    }
+},
+{
+    "model": "audits.attachment",
+    "pk": 90,
+    "fields": {
+        "workpaper": "attachments/55779_HjqLpoa.png",
+        "filename": "55779.png",
+        "content_type": 11,
+        "object_id": 82
+    }
+},
+{
+    "model": "audits.attachment",
+    "pk": 91,
+    "fields": {
+        "workpaper": "attachments/55779_gTpjvXm.png",
+        "filename": "55779.png",
+        "content_type": 12,
+        "object_id": 73
+    }
+},
+{
+    "model": "audits.attachment",
+    "pk": 92,
+    "fields": {
+        "workpaper": "attachments/55779_uaf8c1L.png",
+        "filename": "55779.png",
+        "content_type": 13,
+        "object_id": 79
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 4,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 4,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 4,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 5,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 5,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 5,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 6,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 6,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 6,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can add attachment",
+        "content_type": 7,
+        "codename": "add_attachment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can change attachment",
+        "content_type": 7,
+        "codename": "change_attachment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can delete attachment",
+        "content_type": 7,
+        "codename": "delete_attachment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can add audit",
+        "content_type": 8,
+        "codename": "add_audit"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can change audit",
+        "content_type": 8,
+        "codename": "change_audit"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can delete audit",
+        "content_type": 8,
+        "codename": "delete_audit"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add process",
+        "content_type": 9,
+        "codename": "add_process"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change process",
+        "content_type": 9,
+        "codename": "change_process"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete process",
+        "content_type": 9,
+        "codename": "delete_process"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can add objective",
+        "content_type": 10,
+        "codename": "add_objective"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can change objective",
+        "content_type": 10,
+        "codename": "change_objective"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can delete objective",
+        "content_type": 10,
+        "codename": "delete_objective"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can add risk",
+        "content_type": 11,
+        "codename": "add_risk"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can change risk",
+        "content_type": 11,
+        "codename": "change_risk"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can delete risk",
+        "content_type": 11,
+        "codename": "delete_risk"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can add control",
+        "content_type": 12,
+        "codename": "add_control"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can change control",
+        "content_type": 12,
+        "codename": "change_control"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can delete control",
+        "content_type": 12,
+        "codename": "delete_control"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add test",
+        "content_type": 13,
+        "codename": "add_test"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change test",
+        "content_type": 13,
+        "codename": "change_test"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete test",
+        "content_type": 13,
+        "codename": "delete_test"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can add finding",
+        "content_type": 14,
+        "codename": "add_finding"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can change finding",
+        "content_type": 14,
+        "codename": "change_finding"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can delete finding",
+        "content_type": 14,
+        "codename": "delete_finding"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can add action",
+        "content_type": 15,
+        "codename": "add_action"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can change action",
+        "content_type": 15,
+        "codename": "change_action"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can delete action",
+        "content_type": 15,
+        "codename": "delete_action"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can add auditors",
+        "content_type": 16,
+        "codename": "add_auditors"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can change auditors",
+        "content_type": 16,
+        "codename": "change_auditors"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can delete auditors",
+        "content_type": 16,
+        "codename": "delete_auditors"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$100000$fFHGquqkPD2X$SjSdS3BzlYbyJHHtBc5EL2KdZbnaiQpD3FHNuPQ4L70=",
+        "last_login": "2018-12-15T05:22:30.967Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "admin@example.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2015-12-28T08:43:30.728Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "audits.audit",
+    "pk": 18,
+    "fields": {
+        "title": "Auditoria mi Universidad",
+        "desc": "Auditor\u00eda interna de todos los procesos",
+        "status": "AC",
+        "start_date": "2017-01-10",
+        "end_date": "2017-01-31",
+        "fy": "2017",
+        "changed_by": 1,
+        "changed_on": "2018-08-13T06:05:38.074Z"
+    }
+},
+{
+    "model": "audits.audit",
+    "pk": 65,
+    "fields": {
+        "title": "Coop",
+        "desc": "",
+        "status": "DR",
+        "start_date": "2018-05-25",
+        "end_date": "2018-05-25",
+        "fy": "2019",
+        "changed_by": 1,
+        "changed_on": "2018-12-15T05:52:37.121Z"
+    }
+},
+{
+    "model": "audits.audit",
+    "pk": 78,
+    "fields": {
+        "title": "Procurement (Example)",
+        "desc": "This is a procurement example. Please do NOT modify this audit!",
+        "status": "AC",
+        "start_date": "2018-07-09",
+        "end_date": "2018-07-31",
+        "fy": "2018",
+        "changed_by": 1,
+        "changed_on": "2018-12-15T05:54:29.659Z"
+    }
+},
+{
+    "model": "audits.audit",
+    "pk": 92,
+    "fields": {
+        "title": "Bankac\u0131l\u0131k S\u00fcre\u00e7leri",
+        "desc": "-\tMevduat,\r\n-\tBireysel/Kurumsal Kredi,\r\n-\tMuhasebe,\r\n-\tAlternatif Da\u011f\u0131t\u0131m Kanallar\u0131,\r\n-\tBanka ve Kredi Kartlar\u0131,\r\n-\tFinansal Raporlama,\r\n-\t\u00d6deme Sistemleri,\r\n-\tHazine/Menkul K\u0131ymetler ve Fon Y\u00f6netimi \r\n\r\nana bankac\u0131l\u0131k s\u00fcre\u00e7leri ile sat\u0131n alma s\u00fcrecine y\u00f6nelik incelemelerde bulunulacakt\u0131r. \r\n\r\nB\u00f6l\u00fcm\u00fcm\u00fczce, s\u00fcre\u00e7 sahiplerince uygulanan ve 1. savunma hatt\u0131n\u0131 olu\u015fturan kontrollerin tasar\u0131m ve i\u015fletim etkinli\u011fini de\u011ferlendirmeye y\u00f6nelik incelemeler yap\u0131lacakt\u0131r.",
+        "status": "DR",
+        "start_date": "2018-05-01",
+        "end_date": "2018-12-31",
+        "fy": "2018",
+        "changed_by": 1,
+        "changed_on": "2018-08-28T12:30:30.560Z"
+    }
+},
+{
+    "model": "audits.audit",
+    "pk": 108,
+    "fields": {
+        "title": "gestion des incident",
+        "desc": "process",
+        "status": "AC",
+        "start_date": "2018-10-01",
+        "end_date": "2018-12-31",
+        "fy": "2018",
+        "changed_by": 1,
+        "changed_on": "2018-12-15T05:50:59.351Z"
+    }
+},
+{
+    "model": "audits.audit",
+    "pk": 112,
+    "fields": {
+        "title": "\u0641\u062a\u062d \u0627\u0644\u062d\u0633\u0627\u0628\u0627\u062a",
+        "desc": "\u0639\u0645\u0644\u064a\u0627\u062a \u0641\u062a\u062d \u062d\u0633\u0627\u0628\u0627\u062a \u0644\u0644\u0639\u0645\u0644\u0627\u0621",
+        "status": "DR",
+        "start_date": "2018-10-10",
+        "end_date": "2018-10-25",
+        "fy": "2018",
+        "changed_by": 1,
+        "changed_on": "2018-10-03T11:26:19.660Z"
+    }
+},
+{
+    "model": "audits.audit",
+    "pk": 120,
+    "fields": {
+        "title": "St. Maarten Medical Center Foundation SMMC 2018",
+        "desc": "Audit recommendation pertaining to Dr. Friday Admission Agreement 2018 (review)",
+        "status": "DR",
+        "start_date": "2018-10-22",
+        "end_date": "2018-10-22",
+        "fy": "2018",
+        "changed_by": 1,
+        "changed_on": "2018-12-07T17:16:30.478Z"
+    }
+},
+{
+    "model": "audits.process",
+    "pk": 17,
+    "fields": {
+        "audit": 18,
+        "title": "Desarrollo Institucional",
+        "desc": "Macroproceso de desarrollo Institucional",
+        "changed_by": 1,
+        "changed_on": "2017-01-11T03:09:52.747Z"
+    }
+},
+{
+    "model": "audits.process",
+    "pk": 18,
+    "fields": {
+        "audit": 18,
+        "title": "Gesti\u00f3n Financiera",
+        "desc": "Macroproceso de gesti\u00f3n financiera",
+        "changed_by": 1,
+        "changed_on": "2017-01-11T03:10:34.851Z"
+    }
+},
+{
+    "model": "audits.process",
+    "pk": 67,
+    "fields": {
+        "audit": 65,
+        "title": "Loan receivables",
+        "desc": "Loan receivables",
+        "changed_by": 1,
+        "changed_on": "2018-05-25T07:59:42.024Z"
+    }
+},
+{
+    "model": "audits.process",
+    "pk": 68,
+    "fields": {
+        "audit": 65,
+        "title": "Interest to lend money",
+        "desc": "Interest to lend money",
+        "changed_by": 1,
+        "changed_on": "2018-05-28T06:49:12.208Z"
+    }
+},
+{
+    "model": "audits.process",
+    "pk": 69,
+    "fields": {
+        "audit": 65,
+        "title": "Allowance for doubtful accounts",
+        "desc": "Allowance for doubtful accounts",
+        "changed_by": 1,
+        "changed_on": "2018-05-28T06:55:15.565Z"
+    }
+},
+{
+    "model": "audits.process",
+    "pk": 93,
+    "fields": {
+        "audit": 92,
+        "title": "Hazine, Menkul K\u0131ymetler ve Fon Y\u00f6netimi",
+        "desc": "yyyyuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu",
+        "changed_by": 1,
+        "changed_on": "2018-08-28T12:31:37.864Z"
+    }
+},
+{
+    "model": "audits.process",
+    "pk": 101,
+    "fields": {
+        "audit": 108,
+        "title": "d\u00e9claration d'incident",
+        "desc": "processs",
+        "changed_by": 1,
+        "changed_on": "2018-09-27T08:22:20.505Z"
+    }
+},
+{
+    "model": "audits.process",
+    "pk": 102,
+    "fields": {
+        "audit": 108,
+        "title": "traitement incident",
+        "desc": "gygugiu",
+        "changed_by": 1,
+        "changed_on": "2018-09-27T08:22:36.993Z"
+    }
+},
+{
+    "model": "audits.process",
+    "pk": 106,
+    "fields": {
+        "audit": 112,
+        "title": "\u0627\u0644\u062a\u063a\u0630\u064a\u0629 \u0639\u0644\u0649 \u0627\u0644\u0646\u0638\u0627\u0645",
+        "desc": "\u0635\u062d\u0629 \u0627\u0644\u062a\u062a\u063a\u0630\u064a\u0629 \u0639\u0644\u0649 \u0627\u0644\u0646\u0638\u0627\u0645",
+        "changed_by": 1,
+        "changed_on": "2018-10-03T05:06:16.796Z"
+    }
+},
+{
+    "model": "audits.process",
+    "pk": 109,
+    "fields": {
+        "audit": 120,
+        "title": "test process",
+        "desc": "test process",
+        "changed_by": 1,
+        "changed_on": "2018-10-22T10:12:25.857Z"
+    }
+},
+{
+    "model": "audits.process",
+    "pk": 110,
+    "fields": {
+        "audit": 120,
+        "title": "Testing effectiveness of Attending Physician change/billing Dr. Friday exceptions",
+        "desc": "Between St. Maarten Medical Center and Womens Health Care operating specialist Dr. Friday there is an admissions agreement. The admissions agreement is entered into in August 17th, 2015 for a period \"indefinite\"/ The purpose of the agreement is to allow Dr. Friday to operate and utilze the",
+        "changed_by": 1,
+        "changed_on": "2018-10-23T12:38:18.464Z"
+    }
+},
+{
+    "model": "audits.process",
+    "pk": 116,
+    "fields": {
+        "audit": 78,
+        "title": "Purchasing Finished Goods",
+        "desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-12-15T05:54:53.399Z"
+    }
+},
+{
+    "model": "audits.process",
+    "pk": 117,
+    "fields": {
+        "audit": 78,
+        "title": "Purchasing Raw Materials",
+        "desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-12-15T05:55:01.871Z"
+    }
+},
+{
+    "model": "audits.process",
+    "pk": 118,
+    "fields": {
+        "audit": 78,
+        "title": "Inventory (Stock)",
+        "desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-12-15T05:55:18.128Z"
+    }
+},
+{
+    "model": "audits.process",
+    "pk": 119,
+    "fields": {
+        "audit": 78,
+        "title": "Accounts Payable and Disbursements",
+        "desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-12-15T05:55:35.273Z"
+    }
+},
+{
+    "model": "audits.objective",
+    "pk": 16,
+    "fields": {
+        "audit": 18,
+        "title": "Conciliaci\u00f3n Bancaria",
+        "desc": "Auditor\u00eda a la conciliaci\u00f3n bancaria",
+        "changed_by": 1,
+        "changed_on": "2017-01-11T03:11:44.927Z",
+        "process": [
+            18
+        ]
+    }
+},
+{
+    "model": "audits.objective",
+    "pk": 17,
+    "fields": {
+        "audit": 18,
+        "title": "Seguridad servidores",
+        "desc": "Mantener los servidores contra ataques inform\u00e1ticos",
+        "changed_by": 1,
+        "changed_on": "2017-01-11T03:13:17.952Z",
+        "process": [
+            17
+        ]
+    }
+},
+{
+    "model": "audits.objective",
+    "pk": 57,
+    "fields": {
+        "audit": 65,
+        "title": "Borrow",
+        "desc": "Borrow",
+        "changed_by": 1,
+        "changed_on": "2018-05-25T08:10:39.966Z",
+        "process": [
+            67
+        ]
+    }
+},
+{
+    "model": "audits.objective",
+    "pk": 58,
+    "fields": {
+        "audit": 65,
+        "title": "Guarantee",
+        "desc": "Guarantee",
+        "changed_by": 1,
+        "changed_on": "2018-05-28T06:39:19.692Z",
+        "process": [
+            67
+        ]
+    }
+},
+{
+    "model": "audits.objective",
+    "pk": 59,
+    "fields": {
+        "audit": 65,
+        "title": "Interest to lend money",
+        "desc": "Interest to lend money",
+        "changed_by": 1,
+        "changed_on": "2018-05-28T06:50:00.963Z",
+        "process": [
+            68
+        ]
+    }
+},
+{
+    "model": "audits.objective",
+    "pk": 61,
+    "fields": {
+        "audit": 65,
+        "title": "Allowance for doubtful accounts",
+        "desc": "Allowance for doubtful accounts",
+        "changed_by": 1,
+        "changed_on": "2018-05-28T06:57:48.249Z",
+        "process": [
+            69
+        ]
+    }
+},
+{
+    "model": "audits.objective",
+    "pk": 81,
+    "fields": {
+        "audit": 92,
+        "title": "Yat\u0131r\u0131m Fonlar\u0131n\u0131n Mutabakat\u0131",
+        "desc": "M\u00fc\u015fterilerin hesaplar\u0131nda bulunan yat\u0131r\u0131m fonlar\u0131n\u0131n MKK nezdindeki kay\u0131tlarla g\u00fcnl\u00fck olarak mutabakat\u0131n\u0131n yap\u0131lmas\u0131 gerekmektedir.",
+        "changed_by": 1,
+        "changed_on": "2018-08-28T12:33:03.816Z",
+        "process": [
+            93
+        ]
+    }
+},
+{
+    "model": "audits.objective",
+    "pk": 88,
+    "fields": {
+        "audit": 108,
+        "title": "disponibilit\u00e9",
+        "desc": "jhfkugfv",
+        "changed_by": 1,
+        "changed_on": "2018-09-27T08:23:51.789Z",
+        "process": [
+            101,
+            102
+        ]
+    }
+},
+{
+    "model": "audits.objective",
+    "pk": 89,
+    "fields": {
+        "audit": 108,
+        "title": "routage d'incident fluide",
+        "desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-09-27T08:25:12.807Z",
+        "process": [
+            101
+        ]
+    }
+},
+{
+    "model": "audits.objective",
+    "pk": 92,
+    "fields": {
+        "audit": 112,
+        "title": "\u0627\u0643\u062a\u0645\u0627\u0644 \u0627\u0644\u0645\u0633\u062a\u0646\u062f\u0627\u062a",
+        "desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-10-03T05:07:07.199Z",
+        "process": [
+            106
+        ]
+    }
+},
+{
+    "model": "audits.objective",
+    "pk": 95,
+    "fields": {
+        "audit": 120,
+        "title": "Objective",
+        "desc": "Objective",
+        "changed_by": 1,
+        "changed_on": "2018-10-22T10:13:49.747Z",
+        "process": [
+            109
+        ]
+    }
+},
+{
+    "model": "audits.objective",
+    "pk": 100,
+    "fields": {
+        "audit": 78,
+        "title": "Master data is up to date",
+        "desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-12-15T05:56:03.024Z",
+        "process": [
+            116
+        ]
+    }
+},
+{
+    "model": "audits.objective",
+    "pk": 101,
+    "fields": {
+        "audit": 78,
+        "title": "PO are all entered into the system",
+        "desc": "All purchase orders are entered into the ERP system.",
+        "changed_by": 1,
+        "changed_on": "2018-12-15T05:56:42.786Z",
+        "process": [
+            117
+        ]
+    }
+},
+{
+    "model": "audits.objective",
+    "pk": 102,
+    "fields": {
+        "audit": 78,
+        "title": "Defects are returned timely",
+        "desc": "Defective parts that are purchased have to be returned to the suppliers in a timely fashion",
+        "changed_by": 1,
+        "changed_on": "2018-12-15T05:57:32.700Z",
+        "process": [
+            118
+        ]
+    }
+},
+{
+    "model": "audits.objective",
+    "pk": 103,
+    "fields": {
+        "audit": 78,
+        "title": "POs are entered accurately",
+        "desc": "Purchase orders are entered into the system accurately and timely.",
+        "changed_by": 1,
+        "changed_on": "2018-12-15T05:59:55.222Z",
+        "process": [
+            119
+        ]
+    }
+},
+{
+    "model": "audits.risk",
+    "pk": 13,
+    "fields": {
+        "audit": 18,
+        "title": "Ataques inform\u00e1ticos",
+        "desc": "Ataques informaticos",
+        "changed_by": 1,
+        "changed_on": "2017-01-11T03:14:00.139Z",
+        "objective": [
+            17
+        ]
+    }
+},
+{
+    "model": "audits.risk",
+    "pk": 43,
+    "fields": {
+        "audit": 65,
+        "title": "RLE10503 The borrower does not meet eligibility requirements such as age, membership, occupation, land,",
+        "desc": "RLE10503 The borrower does not meet eligibility requirements such as age, membership, occupation, land,",
+        "changed_by": 1,
+        "changed_on": "2018-05-25T08:01:24.205Z",
+        "objective": [
+            57
+        ]
+    }
+},
+{
+    "model": "audits.risk",
+    "pk": 47,
+    "fields": {
+        "audit": 65,
+        "title": "RLE10510 The applicant has a poor payment history. There is no chance of debt repayment in the future.",
+        "desc": "RLE10510 The applicant has a poor payment history. There is no chance of debt repayment in the future.",
+        "changed_by": 1,
+        "changed_on": "2018-05-25T12:12:48.378Z",
+        "objective": [
+            57
+        ]
+    }
+},
+{
+    "model": "audits.risk",
+    "pk": 48,
+    "fields": {
+        "audit": 65,
+        "title": "RLE1050102_1 Borrowed a member of a relative who borrowed money and applied it privately.",
+        "desc": "RLE1050102_1 Borrowed a member of a relative who borrowed money and applied it privately.",
+        "changed_by": 1,
+        "changed_on": "2018-05-25T12:48:30.173Z",
+        "objective": [
+            57
+        ]
+    }
+},
+{
+    "model": "audits.risk",
+    "pk": 49,
+    "fields": {
+        "audit": 65,
+        "title": "RLE10101_1 Securities valuation made by credit staff only one This makes checking the collateral possible.",
+        "desc": "RLE10101_1 Securities valuation made by credit staff only one This makes checking the collateral possible.",
+        "changed_by": 1,
+        "changed_on": "2018-05-28T06:40:17.656Z",
+        "objective": [
+            58
+        ]
+    }
+},
+{
+    "model": "audits.risk",
+    "pk": 50,
+    "fields": {
+        "audit": 65,
+        "title": "RLE10101_2 evaluates the securities for use as collateral in excess of the appraised value or the reference price of the Department of Lands.",
+        "desc": "RLE10101_2 evaluates the securities for use as collateral in excess of the appraised value or the reference price of the Department of Lands.",
+        "changed_by": 1,
+        "changed_on": "2018-05-28T06:45:16.818Z",
+        "objective": [
+            58
+        ]
+    }
+},
+{
+    "model": "audits.risk",
+    "pk": 51,
+    "fields": {
+        "audit": 65,
+        "title": "RLE40510_1 Loan interest is not calculated correctly due to improper entries or formula calculation.",
+        "desc": "RLE40510_1 Loan interest is not calculated correctly due to improper entries or formula calculation.",
+        "changed_by": 1,
+        "changed_on": "2018-05-28T06:52:06.867Z",
+        "objective": [
+            59
+        ]
+    }
+},
+{
+    "model": "audits.risk",
+    "pk": 52,
+    "fields": {
+        "audit": 65,
+        "title": "RLE80501_02 Allowance for doubtful accounts Bad debtors Not in accordance with the cooperative registrar regulations.",
+        "desc": "RLE80501_02 Allowance for doubtful accounts Bad debtors Not in accordance with the cooperative registrar regulations.",
+        "changed_by": 1,
+        "changed_on": "2018-05-28T06:58:48.953Z",
+        "objective": [
+            61
+        ]
+    }
+},
+{
+    "model": "audits.risk",
+    "pk": 62,
+    "fields": {
+        "audit": 65,
+        "title": "Risco 1",
+        "desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-07-30T19:04:34.670Z",
+        "objective": [
+            57,
+            58
+        ]
+    }
+},
+{
+    "model": "audits.risk",
+    "pk": 70,
+    "fields": {
+        "audit": 92,
+        "title": "M\u00fc\u015fteri k\u0131ymetlerinde sebepsiz art\u0131\u015f/azal\u0131\u015f ya\u015fanmas\u0131",
+        "desc": "Fon operasyonlar\u0131n\u0131n hatal\u0131 olarak yap\u0131lmas\u0131 nedeniyle fon bakiyelerinde mutabakats\u0131zl\u0131k olu\u015fabilir.",
+        "changed_by": 1,
+        "changed_on": "2018-08-28T12:37:24.719Z",
+        "objective": [
+            81
+        ]
+    }
+},
+{
+    "model": "audits.risk",
+    "pk": 77,
+    "fields": {
+        "audit": 108,
+        "title": "absence du personnel",
+        "desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-09-27T08:26:50.000Z",
+        "objective": [
+            88
+        ]
+    }
+},
+{
+    "model": "audits.risk",
+    "pk": 78,
+    "fields": {
+        "audit": 108,
+        "title": "outil indisponible",
+        "desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-09-27T08:27:50.796Z",
+        "objective": [
+            89
+        ]
+    }
+},
+{
+    "model": "audits.risk",
+    "pk": 80,
+    "fields": {
+        "audit": 112,
+        "title": "\u0627\u0633\u062a\u0644\u0627\u0645 \u0645\u0633\u062a\u0646\u062f\u0627\u062a \u0645\u0632\u0648\u0631\u0629",
+        "desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-10-03T05:07:50.298Z",
+        "objective": [
+            92
+        ]
+    }
+},
+{
+    "model": "audits.risk",
+    "pk": 81,
+    "fields": {
+        "audit": 108,
+        "title": "Not done",
+        "desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-10-07T21:13:33.053Z",
+        "objective": [
+            88
+        ]
+    }
+},
+{
+    "model": "audits.risk",
+    "pk": 82,
+    "fields": {
+        "audit": 120,
+        "title": "test risk",
+        "desc": "test risk",
+        "changed_by": 1,
+        "changed_on": "2018-10-22T10:14:14.090Z",
+        "objective": [
+            95
+        ]
+    }
+},
+{
+    "model": "audits.risk",
+    "pk": 89,
+    "fields": {
+        "audit": 78,
+        "title": "Delays and Vendor dissatisfaction",
+        "desc": "POs that have incorrect information tend to delay the purchasing process and also creates vendor dissatisfaction.",
+        "changed_by": 1,
+        "changed_on": "2018-12-15T06:00:52.004Z",
+        "objective": [
+            103
+        ]
+    }
+},
+{
+    "model": "audits.risk",
+    "pk": 90,
+    "fields": {
+        "audit": 78,
+        "title": "Incorrect stock values",
+        "desc": "Defects that are not returned show incorrect stock values and incorrect financials",
+        "changed_by": 1,
+        "changed_on": "2018-12-15T06:01:33.051Z",
+        "objective": [
+            102
+        ]
+    }
+},
+{
+    "model": "audits.risk",
+    "pk": 91,
+    "fields": {
+        "audit": 78,
+        "title": "Purchasing fraud",
+        "desc": "There is a deal of fraud that can happen when some of the POs are allowed to be skipped from being entered into the system.",
+        "changed_by": 1,
+        "changed_on": "2018-12-15T06:02:23.315Z",
+        "objective": [
+            101
+        ]
+    }
+},
+{
+    "model": "audits.risk",
+    "pk": 92,
+    "fields": {
+        "audit": 78,
+        "title": "Incorrect Master data",
+        "desc": "Master data is the central reference of all processes with in the company. If this reference is not correct it will lead to inconsistencies for downstream processes such as manufacturing, accounting , etc",
+        "changed_by": 1,
+        "changed_on": "2018-12-15T06:04:22.773Z",
+        "objective": [
+            100
+        ]
+    }
+},
+{
+    "model": "audits.control",
+    "pk": 13,
+    "fields": {
+        "audit": 18,
+        "title": "Actualizaciones de los software",
+        "desc": "Mantener actualizado los sistemas operativos y los software instalados.",
+        "control_type": "KY",
+        "changed_by": 1,
+        "changed_on": "2017-01-11T03:15:11.101Z",
+        "risk": [
+            13
+        ]
+    }
+},
+{
+    "model": "audits.control",
+    "pk": 36,
+    "fields": {
+        "audit": 65,
+        "title": "The initial qualification of the borrower in determining the loan (O)",
+        "desc": "The initial qualification of the borrower in determining the loan (O)",
+        "control_type": "KY",
+        "changed_by": 1,
+        "changed_on": "2018-05-25T08:03:06.768Z",
+        "risk": [
+            43
+        ]
+    }
+},
+{
+    "model": "audits.control",
+    "pk": 37,
+    "fields": {
+        "audit": 65,
+        "title": "\u0e21\u0e35\u0e01\u0e32\u0e23\u0e01\u0e33\u0e2b\u0e19\u0e14\u0e27\u0e07\u0e40\u0e07\u0e34\u0e19\u0e2a\u0e34\u0e19\u0e40\u0e0a\u0e37\u0e48\u0e2d\u0e43\u0e2b\u0e49\u0e41\u0e01\u0e48\u0e25\u0e39\u0e01\u0e04\u0e49\u0e32\u0e2d\u0e22\u0e48\u0e32\u0e07\u0e40\u0e1b\u0e47\u0e19\u0e25\u0e32\u0e22\u0e25\u0e31\u0e01\u0e29\u0e13\u0e4c\u0e2d\u0e31\u0e01\u0e29\u0e23 (V)",
+        "desc": "\u0e21\u0e35\u0e01\u0e32\u0e23\u0e01\u0e33\u0e2b\u0e19\u0e14\u0e27\u0e07\u0e40\u0e07\u0e34\u0e19\u0e2a\u0e34\u0e19\u0e40\u0e0a\u0e37\u0e48\u0e2d\u0e43\u0e2b\u0e49\u0e41\u0e01\u0e48\u0e25\u0e39\u0e01\u0e04\u0e49\u0e32\u0e2d\u0e22\u0e48\u0e32\u0e07\u0e40\u0e1b\u0e47\u0e19\u0e25\u0e32\u0e22\u0e25\u0e31\u0e01\u0e29\u0e13\u0e4c\u0e2d\u0e31\u0e01\u0e29\u0e23 (V)",
+        "control_type": "KY",
+        "changed_by": 1,
+        "changed_on": "2018-05-25T12:08:07.494Z",
+        "risk": []
+    }
+},
+{
+    "model": "audits.control",
+    "pk": 38,
+    "fields": {
+        "audit": 65,
+        "title": "The list of individuals included in the Black List is included in the loan application (V).",
+        "desc": "The list of individuals included in the Black List is included in the loan application (V).",
+        "control_type": "KY",
+        "changed_by": 1,
+        "changed_on": "2018-05-25T12:14:17.714Z",
+        "risk": [
+            47
+        ]
+    }
+},
+{
+    "model": "audits.control",
+    "pk": 40,
+    "fields": {
+        "audit": 65,
+        "title": "The Black List is regularly updated (C, A, T).",
+        "desc": "The Black List is regularly updated (C, A, T).",
+        "control_type": "KY",
+        "changed_by": 1,
+        "changed_on": "2018-05-25T12:39:44.697Z",
+        "risk": [
+            47
+        ]
+    }
+},
+{
+    "model": "audits.control",
+    "pk": 41,
+    "fields": {
+        "audit": 65,
+        "title": "Recording of loan applications by authorized persons only (O)",
+        "desc": "Recording of loan applications by authorized persons only (O)",
+        "control_type": "KY",
+        "changed_by": 1,
+        "changed_on": "2018-05-28T06:25:42.411Z",
+        "risk": [
+            48
+        ]
+    }
+},
+{
+    "model": "audits.control",
+    "pk": 42,
+    "fields": {
+        "audit": 65,
+        "title": "The conditions and value of the loan collateral are determined in accordance with the regulations of the cooperative and recorded in the system (V, A).",
+        "desc": "The conditions and value of the loan collateral are determined in accordance with the regulations of the cooperative and recorded in the system (V, A).",
+        "control_type": "KY",
+        "changed_by": 1,
+        "changed_on": "2018-05-28T06:42:52.840Z",
+        "risk": [
+            49
+        ]
+    }
+},
+{
+    "model": "audits.control",
+    "pk": 43,
+    "fields": {
+        "audit": 65,
+        "title": "The conditions and value of the loan collateral are determined in accordance with the regulations of the cooperative and recorded in the system (V, A).",
+        "desc": "The conditions and value of the loan collateral are determined in accordance with the regulations of the cooperative and recorded in the system (V, A).",
+        "control_type": "KY",
+        "changed_by": 1,
+        "changed_on": "2018-05-28T06:46:17.972Z",
+        "risk": [
+            50
+        ]
+    }
+},
+{
+    "model": "audits.control",
+    "pk": 44,
+    "fields": {
+        "audit": 65,
+        "title": "Calculation of receipt on the receipt is correct and complete (C, A).",
+        "desc": "Calculation of receipt on the receipt is correct and complete (C, A).",
+        "control_type": "KY",
+        "changed_by": 1,
+        "changed_on": "2018-05-28T06:53:14.433Z",
+        "risk": [
+            51
+        ]
+    }
+},
+{
+    "model": "audits.control",
+    "pk": 45,
+    "fields": {
+        "audit": 65,
+        "title": "The calculation of allowance for doubtful accounts and the entry into the general ledger (V, C, A)",
+        "desc": "The calculation of allowance for doubtful accounts and the entry into the general ledger (V, C, A)",
+        "control_type": "KY",
+        "changed_by": 1,
+        "changed_on": "2018-05-28T06:59:44.500Z",
+        "risk": [
+            52
+        ]
+    }
+},
+{
+    "model": "audits.control",
+    "pk": 61,
+    "fields": {
+        "audit": 92,
+        "title": "G\u00fcnl\u00fck Mutabakat",
+        "desc": "MKK sisteminden temin edilen g\u00fcnl\u00fck fon raporu ile ATT\u0130S sisteminden temin edilen fon raporu memur unvanl\u0131 \u00e7al\u0131\u015fan taraf\u0131ndan g\u00fcnl\u00fck olarak kar\u015f\u0131la\u015ft\u0131r\u0131l\u0131r. Mutabakat sonucu M\u00fcd\u00fcriyet \u00dcyesi taraf\u0131ndan da kontrol edilir.",
+        "control_type": "KY",
+        "changed_by": 1,
+        "changed_on": "2018-08-28T12:39:46.758Z",
+        "risk": [
+            70
+        ]
+    }
+},
+{
+    "model": "audits.control",
+    "pk": 69,
+    "fields": {
+        "audit": 108,
+        "title": "d\u00e9signation back up",
+        "desc": "calendrier back up",
+        "control_type": "KY",
+        "changed_by": 1,
+        "changed_on": "2018-09-27T08:29:12.245Z",
+        "risk": [
+            77
+        ]
+    }
+},
+{
+    "model": "audits.control",
+    "pk": 70,
+    "fields": {
+        "audit": 108,
+        "title": "SLA formalis\u00e9",
+        "desc": "contrat de service",
+        "control_type": "KY",
+        "changed_by": 1,
+        "changed_on": "2018-09-27T08:30:05.985Z",
+        "risk": [
+            78
+        ]
+    }
+},
+{
+    "model": "audits.control",
+    "pk": 72,
+    "fields": {
+        "audit": 112,
+        "title": "\u0627\u0644\u0643\u0634\u0641 \u0639\u0644\u0649 \u0627\u062c\u0647\u0632\u0629 \u0627\u0644\u062a\u0632\u0648\u064a\u0631",
+        "desc": "",
+        "control_type": "KY",
+        "changed_by": 1,
+        "changed_on": "2018-10-03T05:08:41.958Z",
+        "risk": [
+            80
+        ]
+    }
+},
+{
+    "model": "audits.control",
+    "pk": 73,
+    "fields": {
+        "audit": 120,
+        "title": "test cnt",
+        "desc": "test cnt",
+        "control_type": "KY",
+        "changed_by": 1,
+        "changed_on": "2018-10-22T10:14:45.607Z",
+        "risk": [
+            82
+        ]
+    }
+},
+{
+    "model": "audits.control",
+    "pk": 74,
+    "fields": {
+        "audit": 120,
+        "title": "Change Transfer Report/Billing Log of changes in registered Physician",
+        "desc": "Control in place",
+        "control_type": "KY",
+        "changed_by": 1,
+        "changed_on": "2018-10-23T12:41:04.703Z",
+        "risk": [
+            82
+        ]
+    }
+},
+{
+    "model": "audits.control",
+    "pk": 78,
+    "fields": {
+        "audit": 78,
+        "title": "Changes to Master data is authorised",
+        "desc": "All changes to the master data is authorised. There are two managers who will authorise master data changes in each department.",
+        "control_type": "KY",
+        "changed_by": 1,
+        "changed_on": "2018-12-15T06:05:49.838Z",
+        "risk": [
+            92
+        ]
+    }
+},
+{
+    "model": "audits.control",
+    "pk": 79,
+    "fields": {
+        "audit": 78,
+        "title": "All POs are authorised",
+        "desc": "All POs are authorised according to a authorisation matrix. The number of signatures are to be checked before the PO is released and entered into the system",
+        "control_type": "KY",
+        "changed_by": 1,
+        "changed_on": "2018-12-15T06:06:32.954Z",
+        "risk": [
+            91
+        ]
+    }
+},
+{
+    "model": "audits.control",
+    "pk": 80,
+    "fields": {
+        "audit": 78,
+        "title": "Weekly and Monthly stock checks",
+        "desc": "The manager in charge of inventory does weekly checks of high value items and monthly checks of lower value items.",
+        "control_type": "SC",
+        "changed_by": 1,
+        "changed_on": "2018-12-15T06:09:07.214Z",
+        "risk": [
+            90
+        ]
+    }
+},
+{
+    "model": "audits.control",
+    "pk": 81,
+    "fields": {
+        "audit": 78,
+        "title": "Returns are weekly processed",
+        "desc": "Defects that are to be returned are processed on a weekly basis.",
+        "control_type": "KY",
+        "changed_by": 1,
+        "changed_on": "2018-12-15T06:10:05.589Z",
+        "risk": [
+            89
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 12,
+    "fields": {
+        "audit": 18,
+        "title": "Auditorias internas",
+        "desc": "Auditoria Anual",
+        "result": "PS",
+        "result_desc": "Restultado OK",
+        "changed_by": 1,
+        "changed_on": "2018-07-12T16:28:36.666Z",
+        "control": [
+            13
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 13,
+    "fields": {
+        "audit": 18,
+        "title": "Testing mensual",
+        "desc": "Testing mensual de las actualizaciones instaladas.",
+        "result": "PS",
+        "result_desc": "No se corren las actualizaciones",
+        "changed_by": 1,
+        "changed_on": "2018-09-11T14:08:52.795Z",
+        "control": [
+            13
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 38,
+    "fields": {
+        "audit": 65,
+        "title": "Occurrence: O",
+        "desc": "classes of transactions and events for the period under audit",
+        "result": "PS",
+        "result_desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-05-25T08:11:32.901Z",
+        "control": [
+            36
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 39,
+    "fields": {
+        "audit": 65,
+        "title": "Occurrence:O",
+        "desc": "Occurrence:O",
+        "result": "FL",
+        "result_desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-05-25T12:31:24.641Z",
+        "control": [
+            38
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 40,
+    "fields": {
+        "audit": 65,
+        "title": "Classification:Cl",
+        "desc": "Classification:Cl",
+        "result": "FL",
+        "result_desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-05-25T12:36:42.000Z",
+        "control": [
+            38
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 41,
+    "fields": {
+        "audit": 65,
+        "title": "VALUATION &  ALLOCATION: V&A",
+        "desc": "VALUATION & \r\nALLOCATION: V&A",
+        "result": "PS",
+        "result_desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-08-23T11:52:34.523Z",
+        "control": [
+            38
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 42,
+    "fields": {
+        "audit": 65,
+        "title": "Occurrence:O",
+        "desc": "Occurrence:O",
+        "result": "FL",
+        "result_desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-05-25T12:40:21.326Z",
+        "control": [
+            40
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 43,
+    "fields": {
+        "audit": 65,
+        "title": "Classification:Cl",
+        "desc": "Classification:Cl",
+        "result": "FL",
+        "result_desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-05-25T12:41:23.783Z",
+        "control": [
+            40
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 44,
+    "fields": {
+        "audit": 65,
+        "title": "VALUATION &  ALLOCATION: V&A",
+        "desc": "VALUATION &  ALLOCATION: V&A",
+        "result": "FL",
+        "result_desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-05-25T12:41:55.542Z",
+        "control": [
+            40
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 45,
+    "fields": {
+        "audit": 65,
+        "title": "Occurrence:O",
+        "desc": "Occurrence:O",
+        "result": "FL",
+        "result_desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-05-28T06:25:26.667Z",
+        "control": [
+            41
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 46,
+    "fields": {
+        "audit": 65,
+        "title": "Existence:E",
+        "desc": "Existence:E",
+        "result": "FL",
+        "result_desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-05-28T06:32:27.720Z",
+        "control": [
+            41
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 47,
+    "fields": {
+        "audit": 65,
+        "title": "RIGHTS&OBLIGATIONS: R&O",
+        "desc": "RIGHTS&OBLIGATIONS: R&O",
+        "result": "FL",
+        "result_desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-05-28T06:34:31.313Z",
+        "control": [
+            41
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 48,
+    "fields": {
+        "audit": 65,
+        "title": "ACCURACY: A",
+        "desc": "ACCURACY: A",
+        "result": "FL",
+        "result_desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-05-28T06:43:43.185Z",
+        "control": [
+            42
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 49,
+    "fields": {
+        "audit": 65,
+        "title": "Occurrence:O",
+        "desc": "Occurrence:O",
+        "result": "FL",
+        "result_desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-05-28T06:47:36.593Z",
+        "control": [
+            43
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 50,
+    "fields": {
+        "audit": 65,
+        "title": "COMPLETENESS: C",
+        "desc": "COMPLETENESS: C",
+        "result": "FL",
+        "result_desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-05-28T07:04:13.923Z",
+        "control": [
+            45
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 51,
+    "fields": {
+        "audit": 65,
+        "title": "ACCURACY: A",
+        "desc": "ACCURACY: A",
+        "result": "PS",
+        "result_desc": "Not sure of testing",
+        "changed_by": 1,
+        "changed_on": "2018-09-08T07:06:53.763Z",
+        "control": [
+            45
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 52,
+    "fields": {
+        "audit": 65,
+        "title": "Classification:Cl",
+        "desc": "Classification:Cl",
+        "result": "FL",
+        "result_desc": "Classification documents were not available for verification",
+        "changed_by": 1,
+        "changed_on": "2018-07-12T16:24:24.534Z",
+        "control": [
+            45
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 53,
+    "fields": {
+        "audit": 65,
+        "title": "VALUATION &  ALLOCATION: V&A",
+        "desc": "VALUATION & \r\nALLOCATION: V&A",
+        "result": "FL",
+        "result_desc": "efwef",
+        "changed_by": 1,
+        "changed_on": "2018-09-10T03:25:30.223Z",
+        "control": [
+            45
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 54,
+    "fields": {
+        "audit": 65,
+        "title": "ACCURACY&VALUATION : A&V",
+        "desc": "ACCURACY&VALUATION : A&V",
+        "result": "FL",
+        "result_desc": "Not PAssedkkk",
+        "changed_by": 1,
+        "changed_on": "2018-06-14T02:42:37.439Z",
+        "control": [
+            45
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 65,
+    "fields": {
+        "audit": 92,
+        "title": "G\u00fcnl\u00fck Mutabakatlar\u0131n Test Edilmesi",
+        "desc": "Her g\u00fcn i\u00e7in mutabakat kay\u0131tlar\u0131 \u00fczerinde M\u00fcd\u00fcriyet \u00fcyesinin kontrol paraf\u0131n\u0131n olup olmad\u0131\u011f\u0131 incelenir. Se\u00e7ilen 5 g\u00fcn i\u00e7in ayr\u0131ca mutabakatlar\u0131n do\u011fru bir \u015fekilde yap\u0131l\u0131p yap\u0131lmad\u0131\u011f\u0131 incelenir.",
+        "result": "FL",
+        "result_desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-08-28T12:43:28.411Z",
+        "control": [
+            61
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 74,
+    "fields": {
+        "audit": 108,
+        "title": "compl\u00e9tude du tableau de back up",
+        "desc": "hfhjfkfu",
+        "result": "PS",
+        "result_desc": "test ok",
+        "changed_by": 1,
+        "changed_on": "2018-09-27T08:36:12.579Z",
+        "control": [
+            69
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 75,
+    "fields": {
+        "audit": 108,
+        "title": "v\u00e9rification des d\u00e9lais d'intervention",
+        "desc": "",
+        "result": "FL",
+        "result_desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-09-27T08:33:02.408Z",
+        "control": [
+            70
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 77,
+    "fields": {
+        "audit": 112,
+        "title": "\u0627\u0644\u062a\u0623\u0643\u062f \u0645\u0646 \u0627\u0644\u0627\u0637\u0644\u0627\u0639 \u0639\u0644\u0649 \u0627\u0644\u0627\u0635\u0644",
+        "desc": "",
+        "result": "FL",
+        "result_desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-10-03T05:10:43.881Z",
+        "control": [
+            72
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 78,
+    "fields": {
+        "audit": 112,
+        "title": "\u0627\u0644\u062a\u0623\u0643\u062f \u0645\u0646 \u0648\u062c\u0648\u062f \u0627\u0644\u0627\u062c\u0647\u0632\u0629 \u0641\u0649 \u0627\u0645\u0627\u0643\u0646\u0647\u0627",
+        "desc": "",
+        "result": "FL",
+        "result_desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-10-03T05:15:49.420Z",
+        "control": [
+            72
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 79,
+    "fields": {
+        "audit": 120,
+        "title": "test ppp",
+        "desc": "test pp",
+        "result": "PS",
+        "result_desc": "result by final test",
+        "changed_by": 1,
+        "changed_on": "2018-10-23T12:43:31.336Z",
+        "control": [
+            73
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 83,
+    "fields": {
+        "audit": 78,
+        "title": "Returns process list",
+        "desc": "Obtain the list of returns that were processed for the audit testing period. Check to see if the returns date were done weekly and that there are no gaps. Check to ensure that the returns were moved to the returns area in the warehouse. Ask to inspect this area.",
+        "result": "PS",
+        "result_desc": "All returns for the period were found to be processed on time. The physical inspection of the returns area in the warehouse was found to have items that were placed there less than a week ago.",
+        "changed_by": 1,
+        "changed_on": "2018-12-15T06:16:53.900Z",
+        "control": [
+            81
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 84,
+    "fields": {
+        "audit": 78,
+        "title": "Stock verification report",
+        "desc": "Obtain the weekly and month stock verification report. Take a sample for the audit testing period. Ensure that the required managers have signed off on these reports.",
+        "result": "PS",
+        "result_desc": "All the stock verification reports for the period was found to be duly signed and dated.",
+        "changed_by": 1,
+        "changed_on": "2018-12-15T06:16:23.616Z",
+        "control": [
+            80
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 85,
+    "fields": {
+        "audit": 78,
+        "title": "Check POs for authorisation",
+        "desc": "Obtain a list of POs for the period of testing. Ensure that the POs are all authorised and the authorisation is according to the authorisation matrix of the department.",
+        "result": "PS",
+        "result_desc": "There were 378 POs that were created during the period. All POs from the sample were duly signed and dated",
+        "changed_by": 1,
+        "changed_on": "2018-12-15T06:16:00.464Z",
+        "control": [
+            79
+        ]
+    }
+},
+{
+    "model": "audits.test",
+    "pk": 86,
+    "fields": {
+        "audit": 78,
+        "title": "Obtain changes to the Master data",
+        "desc": "Obtain a list of all master data changes for the period under testing. Check to ensure that all changes are authorised by atleast 2 managers.",
+        "result": "FL",
+        "result_desc": "For the testing period, there were 30 master data changes. Of these 1 of the changes was found not to have any authorisation. There was no track that this change was even sent to a manager for change.",
+        "changed_by": 1,
+        "changed_on": "2018-12-15T06:15:35.444Z",
+        "control": [
+            78
+        ]
+    }
+},
+{
+    "model": "audits.finding",
+    "pk": 26,
+    "fields": {
+        "test": 38,
+        "title": "test123",
+        "desc": "iioolsks asdlasdhahsdl asdkakl,ahsldhlasdh",
+        "changed_by": 1,
+        "changed_on": "2018-05-25T08:11:26.857Z"
+    }
+},
+{
+    "model": "audits.finding",
+    "pk": 28,
+    "fields": {
+        "test": 54,
+        "title": "test",
+        "desc": "lkhklflkasjFKLJAf",
+        "changed_by": 1,
+        "changed_on": "2018-06-14T02:42:02.910Z"
+    }
+},
+{
+    "model": "audits.finding",
+    "pk": 29,
+    "fields": {
+        "test": 54,
+        "title": "test",
+        "desc": "",
+        "changed_by": 1,
+        "changed_on": "2018-06-14T02:42:25.978Z"
+    }
+},
+{
+    "model": "audits.finding",
+    "pk": 30,
+    "fields": {
+        "test": 54,
+        "title": "qwrq",
+        "desc": "erer",
+        "changed_by": 1,
+        "changed_on": "2018-06-18T12:49:22.965Z"
+    }
+},
+{
+    "model": "audits.finding",
+    "pk": 31,
+    "fields": {
+        "test": 53,
+        "title": "ewfwegdG",
+        "desc": "SDGSfg",
+        "changed_by": 1,
+        "changed_on": "2018-06-18T12:49:40.276Z"
+    }
+},
+{
+    "model": "audits.finding",
+    "pk": 40,
+    "fields": {
+        "test": 75,
+        "title": "manque des d\u00e9lais sur le SLA",
+        "desc": "hggkuguoi",
+        "changed_by": 1,
+        "changed_on": "2018-09-27T08:37:43.510Z"
+    }
+},
+{
+    "model": "audits.finding",
+    "pk": 41,
+    "fields": {
+        "test": 74,
+        "title": "Pas de tableau des suppl\u00e9ances",
+        "desc": "Constat\n\n\nReco",
+        "changed_by": 1,
+        "changed_on": "2018-10-01T12:58:02.137Z"
+    }
+},
+{
+    "model": "audits.finding",
+    "pk": 43,
+    "fields": {
+        "test": 78,
+        "title": "\u0641\u062a\u062d \u0627\u0644\u062d\u0633\u0627\u0628\u0627\u062a",
+        "desc": "\u0648\u062c\u062f\u0646\u0627 \u0641\u0649 \u062d\u0633\u0627\u0628 \u0631\u0642\u0645",
+        "changed_by": 1,
+        "changed_on": "2018-10-03T05:15:24.246Z"
+    }
+},
+{
+    "model": "audits.finding",
+    "pk": 44,
+    "fields": {
+        "test": 79,
+        "title": "fgfdg",
+        "desc": "fdgfdgfg",
+        "changed_by": 1,
+        "changed_on": "2018-10-22T10:17:54.202Z"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2016-05-05T04:17:11.550Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "7",
+        "object_repr": "IT",
+        "action_flag": 2,
+        "change_message": "No fields changed."
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2016-05-05T04:18:07.450Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "POs are entered accurately",
+        "action_flag": 2,
+        "change_message": "Changed process."
+    }
+}
+]

@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block page_title %}Planning{% endblock %}
+
+{% block header_html %}
+	<link rel="stylesheet" href="{% static "css/fullcalendar.min.css" %}">
+	<script type="text/javascript" src="{% static "js/moment.min.js" %}"></script>
+	<script type="text/javascript" src="{% static "js/fullcalendar.min.js" %}"></script>
+{% endblock %}	
+
+{% block content %}
+{% csrf_token %}
+<div id="page-wrapper"><br/>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>Planning</h4>
+                    </div>
+                    <div class="panel-body" id="calendar">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popover-head" class="hide">some title</div>
+<div id="popover-content" class="hide">
+    <form>
+          <input type="text" name="asa" value="asa" />
+    </form>
+</div>
+<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body" id="modalbody">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block script %}
+
+$(document).ready(function() {
+    function convertToEvents(events){
+        var convertedEvents = [{% for event in events %}{title: '{{ event.title }}',
+            start: '{{ event.start }}',
+            end: '{{ event.end }}'},{% endfor %}];
+        return convertedEvents;
+    }
+    
+    $('body').on('click', 'button.fc-prev-button', function() {
+        var moment = $('#calendar').fullCalendar('getDate');
+        var eventDict = {};
+        $.ajax({
+          type: 'GET',
+          url: "{% url 'planning:planning_audits' %}?day="+moment.format('DD-MM-YYYY'),
+          success: function(response) {
+              $('#calendar').fullCalendar('removeEvents');
+              $('#calendar').fullCalendar('addEventSource',response.events);
+              $('#calendar').fullCalendar('rerenderEvents');
+          }
+        });
+    });
+
+    $('body').on('click', 'button.fc-next-button', function() {
+        var moment = $('#calendar').fullCalendar('getDate');
+        $.ajax({
+          type: 'GET',
+          url: "{% url 'planning:planning_audits' %}?day="+moment.format('DD-MM-YYYY'),
+          success: function(response) {
+              $('#calendar').fullCalendar('removeEvents');
+              $('#calendar').fullCalendar('addEventSource',response.events);
+              $('#calendar').fullCalendar('rerenderEvents');
+          }
+        });
+    });
+
+    var events = [{% for event in events %}{
+    		title: '{{ event.title }}',
+            start: '{{ event.start|date:"Y-m-d" }}',
+            end: '{{ event.end|date:"Y-m-d 23:59:59" }}',
+            backgroundColor: '{{ event.backgroundColor }}',
+            url: '{% url 'audits:audit' event.url %}',
+            },
+            {% endfor %}];
+            
+    $('#calendar').fullCalendar({
+        header: {
+            left: 'prev,next',
+            center: 'title',
+            right: 'month'
+        },
+        defaultDate: new Date(),
+        editable: false,
+        displayEventEnd: false,
+        displayEventTime: false,
+        allDay: true,
+        eventRender: function(event, element, view) {
+        },
+        events: events,
+//        dayClick: function (date, allDay, jsEvent, view) {
+//            ShowEventPopup(date);
+//        },
+//        eventClick: function(event) {
+//		    if (event.url) {
+//		      window.open(event.url);
+//		      return false;
+//		    }
+//		}
+    });
+
+    function ShowEventPopup(date) {
+        $('#myModal').modal('toggle');
+        $('#myModalLabel').text(date.format('DD MMM YYYY'));
+        $.ajax({
+          type: 'GET',
+          url: "{% url 'planning:planning_day' %}?day="+date.format('DD-MM-YYYY'), success: function(response) {
+              $("#modalbody").html(response.html);
+          }
+        });
+
+    }
+
+});
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="col-md-12">
+ <h2>Create/Modify an Report Templates</h2>
+    <div class="col-md-6">
+        <form class="form-horizontal" method="post" action="{% url 'audits:audit_report_templates' %}">{% csrf_token %}
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Title</label>
+            <div class="col-sm-10">
+              <select name="template" class="form-control">
+              {% for t in templates %}
+              <option value="{{ t.id }}">{{ t.title }}</option>
+              {% endfor %}
+              </select>
+              <hr />
+              <button type="submit" class="btn btn-info" name="create">Create</button>
+              <button type="submit" class="btn btn-info" name="edit">Edit</button>
+            </div>
+          </div>
+
+        </form>
+    </div>
+</div>
+{% endblock %}

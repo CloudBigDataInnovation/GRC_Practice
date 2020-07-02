@@ -1,0 +1,45 @@
+
+<h3 class="text-center">Process</h3>
+<form class="form-horizontal" method="post" id="ajaxProcessForm" enctype="multipart/form-data">
+    <div style='display:none'><input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token_value }}"/></div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Title</label>
+    <div class="col-sm-10">
+      {{ form.title }}<p class="ajaxformerror" id="title_err"></p>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Reference</label>
+    <div class="col-sm-10">
+      {{ form.ref_id }}<p class="ajaxformerror" id="ref_id_err"></p>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Description</label>
+    <div class="col-sm-10">
+      {{ form.desc }}<p class="ajaxformerror" id="desc_err"></p>
+    </div>
+  </div>
+  <div class="form-group workPapers">
+    <label for="exampleInputFile">Work Papers</label><br>
+    {% if process_id and form.instance.papers.all.0 %}
+    {% with form.instance.papers.all as papers %}
+    {% for paper in papers %}
+    <div class="col-md-12" id="workPaper_{{ paper.id }}">
+        <a href="{{paper.workpaper.url}}" target="_blank">{{paper.filename}}</a><button type="button" onclick="removeAttachment({{ paper.id }})" class="btn btn-xs pull-right">Remove</button>
+        <br><br>
+    </div>
+    {% endfor %}
+    {% endwith %}
+    {% endif %}
+    <div class="col-md-10"><input type="file" class="form-control" name="papers"><br></div>
+  </div>
+  <button type="button" class="btn btn-info" onclick="attachPaper();">Attach 1 more</button><hr />
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="button" class="btn btn-primary" {% if process_id %}onclick="saveAjaxProcessForm({{ audit_id }}, {{ form.instance.id }})"{% else %}onclick="saveAjaxProcessForm({{ audit_id }})"{% endif %}>Save</button>
+      {% if process_id %}<button type="button" class="btn btn-danger" onclick="deleteProcess({{ form.instance.id }})">Delete</button>{% endif %}
+      <button type="button" class="btn btn-default pull-right" onclick="$('#right_panel').empty();">Cancel</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>Generated Audit Report</title>
+        <style type="text/css">
+            @page {
+                size: {{ pagesize }};
+                margin: 1cm;
+                @frame footer {
+                    -pdf-frame-content: footerContent;
+                    bottom: 0cm;
+                    margin-left: 9cm;
+                    margin-right: 9cm;
+                    height: 1cm;
+                }
+            }
+        </style>
+    </head>
+    <body>
+<div class="col-md-12">
+    <div class="well">
+        <img src="http://www.arambankudyil.net/images/temp/main_logo2.png" alt="Responsive image">
+        <p class="pull-right"> Report by Internal Audit Department </p>
+    </div>
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-8">
+        <div class="well"><h3> {{ object.title }} Audit Report </h3></div>
+        <div class="well"><p> {{ object.desc }} </p></div>
+        <table class="table table-bordered" border="1">
+          <thead>
+            <tr>
+              <th>Start Date</th>
+              <th>End Date</th>
+              <th>Auditors List</th>
+              <th>Number of controls</th>
+              <th>Number of tests passed</th>
+              <th>Total number of tests</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ object.start_date }}</td>
+              <td>{{ object.end_date }}</td>
+              <td>Auditors</td>
+              <td>{{ object.control_audit.all.count }}</td>
+              <td>{{ test_passed_count }}</td>
+              <td>{{ object.test_audit.all.count }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Process Name</th>
+              <th>Process Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for obj in object.process_audit.all %}
+            <tr>
+              <td>{{ obj.title }}</td>
+              <td>{{ obj.desc }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Objective Name</th>
+              <th>Objective Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for obj in object.objective_audit.all %}
+            <tr>
+              <td>{{ obj.title }}</td>
+              <td>{{ obj.desc }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Risk Name</th>
+              <th>Risk Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for obj in object.risk_audit.all %}
+            <tr>
+              <td>{{ obj.title }}</td>
+              <td>{{ obj.desc }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Control Name</th>
+              <th>Control Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for obj in object.control_audit.all %}
+            <tr>
+              <td>{{ obj.title }}</td>
+              <td>{{ obj.desc }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <h4>Failed Tests</h4>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Test Name</th>
+              <th>Test Description</th>
+              <th>Test result description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for obj in test_failed %}
+            <tr>
+              <td>{{ obj.title }}</td>
+              <td>{{ obj.desc }}</td>
+              <td>{{ obj.result_desc }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <h4> Passed Tests</h4>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Test Name</th>
+              <th>Test Description</th>
+              <th>Test result description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for obj in test_passed %}
+            <tr>
+              <td>{{ obj.title }}</td>
+              <td>{{ obj.desc }}</td>
+              <td>{{ obj.result_desc }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+    </div>
+    <div class="col-md-12 well">
+        <p>Create with Envelop http://www.grcenvelop.com</p>
+    </div>
+</div>
+</body>
+</html>

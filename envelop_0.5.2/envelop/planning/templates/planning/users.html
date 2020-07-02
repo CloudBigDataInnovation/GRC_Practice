@@ -1,0 +1,11 @@
+{% if users %}
+{% for user in users %}
+<div class="alert {% if user.count == 1 %}alert-info{% else %}alert-danger{% endif %}" role="alert">
+  <strong>{{ user.name }}</strong><small>({{ user.username }})</small> {% if user.count > 1 %}<span class="badge pull-right">{{ user.count }}</span>{% endif %}
+</div>
+{% endfor %}
+{% else %}
+<div class="alert alert-warning" role="alert">
+  <strong>{% if audits_list %}No Conflicts{% else %}No Audits{% endif %}</strong>
+</div>
+{% endif %}

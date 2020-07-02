@@ -1,0 +1,24 @@
+.. index:: Risk
+
+Risk
+=======
+
+A risk may be associated with many objectives (many to many relation). When creating a risk, it has to be associated to atleast one :doc:`objective`.
+
+Each risk can have many :doc:`control` s.
+
+A risk has five basic aspects:
+
+* Title
+   This field has a maximum of 200 characters.
+* Reference
+   This field has a maximum of 200 characters.
+* Description
+   This is a regular text field where there is no limit to the number of characters.
+* Objective
+   A risk has to be associated to atleast one :doc:`objective`.
+* Work papers
+   Work papers are attachments or file uploads where you can keep files associated to a risk. 
+
+.. include:: file_size_warning.rst
+

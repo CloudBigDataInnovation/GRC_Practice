@@ -1,0 +1,50 @@
+.. index:: Creating and Managing an Audit
+
+Creating and Managing an Audit
+=================================
+
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+
+.. index:: Creating an Audit
+
+Creating an audit
+++++++++++++++++++++++++++++++++++++++
+
+Creating an audit is the first step. 
+
+.. note:: Most pages are split into a left panel and a right panel
+
+#. Click on **Create a new Audit** link. This link is on the landing page
+
+    .. note:: The left panel contains all the required fields to start an audit. 
+
+#. Fill all the mandatory fields (see :doc:`audits/audits`)
+#. Save the audit (Blue button on right panel)
+#. Add the processes, objectives, risks, controls and tests
+    #. Click on the 'Add/Modify manually' button
+
+        .. note:: The 'Add/Modify manually' button will only appear after the audit has be saved for the first time.
+
+    #. Add :doc:`audits/process`. You may add any number of processes to an audit. Each process can be expanded using      the '+' right beside the title of the process.
+    #. Add :doc:`audits/objective`. When saving the objective, remember to assign a process. You may assign an objective to multiple processes. To see the newly added objective, click on the '+' beside the process to which the objective was assigned.
+    #. Add :doc:`audits/risk`. When saving the risk, remember to assign an objective.  You may assign a risk to multiple objectives. To see the newly added risk, click on the '+' beside the objective to which the risk was assigned.
+    #. Add :doc:`audits/control`. When saving the control, remember to assign a risk. You may assign a control to multiple risks.  To see the newly added control, click on the '+' beside the risk to which the control was assigned.
+    #. Add :doc:`audits/test`. When saving the test, remember to assign a control. You may assign a test to multiple controls. To see the newly added test, click on the '+' beside the control to which the test was assigned.
+
+
+.. index:: Managing an Audit
+
+Managing an audit
+++++++++++++++++++++++++
+
+Managing an audit is the ongoing process. Here are the different actions you can do to manage an existing audit:
+
+* Change mandatory fields
+* Generate a report
+* Change process, objective, risk, control and test
+* Attach and delete workpapers
+
+.. warning:: If you delete any object (i.e. an audit, a process, an objective, a risk, a control, or a test), all objects associated with it will also be deleted. For example, if an audit is deleted, all processes, objectives, risks, controls and tests under this audit will also be deleted!

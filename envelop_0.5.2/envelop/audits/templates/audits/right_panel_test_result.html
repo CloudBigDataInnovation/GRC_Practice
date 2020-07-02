@@ -1,0 +1,51 @@
+<h3 class="text-center">Test</h3>
+<form class="form-horizontal" method="post" id="testForm">
+    <div style='display:none'><input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token_value }}"/></div>
+  <div class="form-group">
+    <label class="col-sm-12"><span class="col-sm-2">Title</span> <span class="col-sm-10">{{ form.instance.title }}</span></label>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-12"><span class="col-sm-2">Reference</span> <span class="col-sm-10">{{ form.instance.ref_id }}</span></label>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-12"><span class="col-sm-2">Description</span> <span class="col-sm-10">{{ form.instance.desc }}</span></label>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Result</label>
+    <div class="col-sm-10">{{ form.result }}</div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Result Description</label>
+    <div class="col-sm-10">
+      {{ form.result_desc }}<p class="ajaxformerror" id="res_desc_err"></p>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="button" class="btn btn-default" onclick="saveAjaxTestForm({{test_id}});">Save</button>
+      <a href="{% url 'audits:ajax_finding_view' %}?test_id={{test_id}}" class="btn btn-default" data-toggle="modal" data-target="#createFinding">Create Finding</a>
+    </div>
+  </div>
+</form>
+
+<div class="modal fade" id="createFinding" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+    </div>
+  </div>
+</div>
+
+<script>
+    $(function(){
+      $("a[data-target=#createFinding]").click(function(ev) {
+           ev.preventDefault();
+           target = $(this).attr("href");
+           // load the url and show modal on success
+           $("#createFinding .modal-body").load(target, function() {
+                $("#createFinding").modal("show");
+           });
+        });
+    });
+</script>

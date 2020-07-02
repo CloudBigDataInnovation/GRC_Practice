@@ -1,0 +1,39 @@
+{% if controllers %}
+{% for obj in controllers %}
+<div class="modal fade control-modal-{{ obj.id }}" id="md_pr_{{ process_id }}_obj_{{objective_id}}_rs_{{risk_id}}_ct_{{ obj.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">{{ obj.title }}</h4>
+      </div>
+      <div class="modal-body">
+        {{ obj.ref_id }}
+      </div>
+      <div class="modal-body">
+        {{ obj.desc }}
+        <br>
+        {{ obj.control_type }}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-info control-list-{{ obj.id }}">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a id="pro_{{ process_id }}_obj_{{ objective_id }}_risk_{{ risk_id }}_ctrl_{{ obj.id }}" data-toggle="collapse" data-parent="#acc_pro_{{ process_id }}_obj_{{ objective_id }}_risk_{{ risk_id }}" href="#pr_{{process_id}}_obj_{{ objective_id }}_rs_{{risk_id}}_ct_{{obj.id}}_collapse" onclick="get_tests('pro_'+{{ process_id }}+'_obj_'+{{ objective_id }}+'_risk_'+{{ risk_id }}+'_ctrl_'+{{ obj.id }}, {{ obj.id }}, {{ process_id }}, {{ objective_id }}, {{ risk_id }})">+</a>
+            <a href="javascript:void(0);" {% if management %} onclick="loadAjaxControlForm({{ obj.audit_id }}, {{ obj.id }})" {% else %} data-toggle="modal" data-target="#md_pr_{{ process_id }}_obj_{{objective_id}}_rs_{{risk_id}}_ct_{{ obj.id }}"{% endif %}>{{ obj.title }}</a>
+        </h4>
+    </div>
+    <div id="pr_{{process_id}}_obj_{{objective_id}}_rs_{{risk_id}}_ct_{{ obj.id }}_collapse" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="panel-group" id="acc_pro_{{ process_id }}_obj_{{ objective_id }}_risk_{{risk_id}}_ctrl_{{ obj.id }}"></div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endif %}

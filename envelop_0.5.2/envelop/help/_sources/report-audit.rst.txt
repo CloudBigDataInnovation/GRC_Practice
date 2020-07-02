@@ -1,0 +1,19 @@
+.. index:: Reports
+
+Audit Report
+==========================
+
+An audit report is the final output of this tool. The audit report is an aggregation of all the data that is in an audit. i.e. all the processes, objectives, risks, controls, tests, and findings are presented in one document. 
+
+.. index:: Template (Report)
+
+Template
++++++++++++++
+
+A sample template to generate the report is provided with tool. This template is available at (grc_envelop root)/audits/templates/audits/report_template.html Please ask your system administrator to help you get to this file.
+You may modify this file according to your convenience. If there are some specific report requirements, please do no hesitate to contact hello@grcenvelop.com
+
+
+
+
+

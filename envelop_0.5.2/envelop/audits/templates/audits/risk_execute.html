@@ -1,0 +1,46 @@
+{% if object_list %}
+
+    <div class="col-md-6">
+            <div class="panel-group" id="accordion1">
+                {% for obj in object_list %}
+                <div class="modal fade" id="md_pr_{{ process_id }}_obj_{{objective_id}}_rs_{{ obj.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">{{ obj.title }}</h4>
+                      </div>
+                      <div class="modal-body">
+                        {{ obj.ref_id }}
+                      </div>
+                      <div class="modal-body">
+                        {{ obj.desc }}
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a id="pro_{{ process_id }}_obj_{{ objective_id }}_risk_{{ obj.id }}" data-toggle="collapse" data-parent="#accordion1" href="#pr_{{process_id}}_obj_{{ objective_id }}_rs_{{obj.id}}_collapse" onclick="get_controls('pro_'+{{ process_id }}+'_obj_'+{{ objective_id }}+'_risk_'+{{ obj.id }}, {{ obj.id }}, {{ process_id }}, {{ objective_id }})">+</a>
+                            <a href="javascript:void(0);" data-toggle="modal" data-target="#md_pr_{{ process_id }}_obj_{{objective_id}}_rs_{{ obj.id }}">{{ obj.title }}</a>
+                        </h4>
+                    </div>
+                    <div id="pr_{{process_id}}_obj_{{objective_id}}_rs_{{ obj.id }}_collapse" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="panel-group" id="acc_pro_{{ process_id }}_obj_{{ objective_id }}_risk_{{ obj.id }}"></div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+			<div>Total: {{ object_list.count}} risks</div>
+        </div>
+{% else %}
+    <p>No risk are available.</p>
+{% endif %}

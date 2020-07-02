@@ -1,0 +1,225 @@
+{% extends "base.html" %}
+{% block page_title %}Audit Execute{% endblock %}
+
+{% block content %}
+{% csrf_token %}
+<div class="col-md-12">
+    <h1><a href="{% url 'audits:audit' audit.id %}">{{ audit.title }}</a> <small>Execute</small></h1>
+    <div class="col-md-12">
+    	<label class="control-label col-md-1">View by:</label>
+        <div class="col-md-2">
+            <select class="form-control" id="audit_view">
+                <option {% ifequal type 'process' %}selected="true"{% endifequal %} value="process">process</option>
+                <option {% ifequal type 'objective' %}selected="true"{% endifequal %} value="objective">objective</option>
+                <option {% ifequal type 'risk' %}selected="true"{% endifequal %} value="risk">risk</option>
+                <option {% ifequal type 'control' %}selected="true"{% endifequal %} value="control">control</option>
+                <option {% ifequal type 'test' %}selected="true"{% endifequal %} value="test">test</option>
+            </select>
+        </div>
+    </div>
+    <br><br>
+    {% if type == 'process' %}
+    {% include 'audits/process_execute.html' %}
+    {% endif %}
+    {% if type == 'objective' %}
+    {% include 'audits/objective_execute.html' %}
+    {% endif %}
+    {% if type == 'risk' %}
+    {% include 'audits/risk_execute.html' %}
+    {% endif %}
+    {% if type == 'control' %}
+    {% include 'audits/control_execute.html' %}
+    {% endif %}
+    {% if type == 'test' %}
+    {% include 'audits/test_execute.html' %}
+    {% endif %}
+    <div class="col-md-5" id="right_panel"><h3>Please select a Test!</h3></div>
+
+</div>
+<script>
+    $(function(){
+      // bind change event to select
+      $('#audit_view').on('change', function () {
+          var view = $(this).val(); // get selected value
+          var url = "/audits/audit/"+{{audit_id}}+"/execute/"+view;
+          if (url) { // require a URL
+              window.location = url; // redirect
+          }
+          return false;
+      });
+    });
+</script>
+<script>
+function get_objectives(id, process_id){
+    $("#"+id).attr("onclick","");
+    var url = "/audits/audit/process/"+process_id+"/objective";
+    $.ajax({
+        url: url,
+        type: "GET",
+        dataType: "json",
+        success: function(result){
+            $("#acc_"+id).empty().append(result.html);
+        }
+    });
+}
+
+function get_risks(id, risk_id, process_id){
+    $("#"+id).attr("onclick","");
+    var url = "/audits/audit/objective/"+risk_id+"/risks";
+    $.ajax({
+        url: url,
+        type: "GET",
+        dataType: "json",
+        data:{process:process_id},
+        success: function(result){
+            $("#acc_"+id).empty().append(result.html);
+        }
+    });
+}
+
+
+function get_controls(id, controller_id, process_id, objective_id){
+    $("#"+id).attr("onclick","");
+    var url = "/audits/audit/risk/"+controller_id+"/controller";
+    $.ajax({
+        url: url,
+        type: "GET",
+        dataType: "json",
+        data:{process:process_id, objective: objective_id},
+        success: function(result){
+            $("#acc_"+id).empty().append(result.html);
+        }
+    });
+}
+
+function get_tests(id, test_id, process_id, objective_id, risk_id){
+    $("#"+id).attr("onclick","");
+    var url = "/audits/audit/control/"+test_id+"/test";
+    $.ajax({
+        url: url,
+        type: "GET",
+        dataType: "json",
+        data:{process:process_id, objective: objective_id,risk:risk_id},
+        success: function(result){
+            $("#acc_"+id).empty().append(result.html);
+        }
+    });
+}
+
+function get_findings(id, find_id, process_id, objective_id, risk_id, control_id){
+    $("#"+id).attr("onclick","");
+    var url = "/audits/audit/test/"+find_id+"/findings";
+    $.ajax({
+        url: url,
+        type: "GET",
+        dataType: "json",
+        data:{process:process_id, objective: objective_id, risk:risk_id,
+             control: control_id},
+        success: function(result){
+            $("#acc_"+id).empty().append(result.html);
+        }
+    });
+}
+
+
+function loadAjaxTestForm(id){
+    var url = "/audits/audit/test/"+id+"/ajax";
+    $.ajax({
+        url: url,
+        type: "GET",
+        dataType: "json",
+        success: function(result){
+            $("#right_panel").empty().append(result.html);
+        }
+    });
+}
+
+function saveAjaxTestForm(id){
+    var frm = $('#testForm');
+    var url = "/audits/audit/test/"+id+"/ajax";
+    $.ajax({
+        url: url,
+        type: "POST",
+        dataType: "json",
+        data: frm.serialize(),
+        success: function(result){
+            $('.ajaxformerror').empty();
+            if (result.status == 'success'){
+                alert('Test updated successfully');
+            }
+            else if(result.error){
+                if(result.error.title){
+                    $('#title_err').html(result.error.title);
+                }
+<!--
+                if(result.error.desc){
+                    alert(result.error.title);
+                    $('#desc_err').html(result.error.desc);
+                }
+                if(result.error.title){
+                    alert(result.error.title);
+                    $('#res_desc_err').html(result.error.result_desc);
+                }
+-->
+            }
+        },
+        error: function(){
+            alert('Unable to update test');
+        }
+    });
+}
+
+function savefindForm(){
+    var frm = $('#findForm');
+    var url = frm.attr('action');
+    frm.ajaxSubmit({
+        url: url,
+        success: function(result){
+            $('.ajaxformerror').empty();
+            if (result.status == 'success'){
+                alert('Finding created successfully');
+                $("#createFinding").modal('hide');
+                $(".test_"+result.test).append(result.html);
+            }
+            else if(result.error){
+                if(result.error.title){
+                    $('#fnd_title_err').html(result.error.title);
+                }
+            }
+        },
+        error: function(){
+            alert('Unable to create finding');
+        }
+    });
+}
+
+function attachPaper(){
+    $(".workPapers").append('<div class="col-md-10"><input type="file" class="form-control" name="papers"></br></div>');
+}
+
+function removeAttachment(id) {
+    var url = "/audits/attachment/"+id+"/delete";
+    $.ajax({
+        type: 'GET',
+        url: url,
+        success: function() {
+            $("#workPaper_"+id).remove();
+        }
+    });
+}
+
+function deleteProcess(id) {
+    var url = "/audits/process/"+id+"/delete";
+    $.ajax({
+        type: 'GET',
+        url: url,
+        success: function() {
+            $("#pr_"+id).remove();
+            $("#prr_"+id).remove();
+            $("#right_panel").empty().append('<p>Process Deleted successfully</p>');
+        }
+    });
+}
+
+</script>
+{% endblock %}

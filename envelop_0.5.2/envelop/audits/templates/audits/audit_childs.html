@@ -1,0 +1,503 @@
+{% extends "base.html" %}
+{% block page_title %}Audit Management{% endblock %}
+
+{% block header_html %}
+<style>
+/*
+.panel-objective .panel-default {
+  border-color: #eea236;
+}
+
+.panel-objective > .panel-heading {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+
+.panel-objective > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #eea236;
+}
+
+.panel-objective > .panel-heading .badge {
+  color: #fff;
+  background-color: #f0ad4e;
+}
+
+.panel-objective > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #eea236;
+}
+
+.panel-objective-heading .panel-heading {
+  background-color:#f0ad4e;
+}
+
+.panel-objective-title .panel-title {
+  color: #fff;
+  background-color:#f0ad4e;
+  border-color:#eea236;
+}
+*/
+</style>
+{% endblock %}
+	
+{% block content %}
+{% csrf_token %}
+<div class="col-md-12">
+    <h1><a href="{% url 'audits:audit' audit.id %}">{{ audit.title }}</a> <small>Management</small></h1>
+    <div class="col-md-12">
+        <button class="btn btn-default" onclick="loadAjaxProcessForm({{ audit_id }});"> Add Process </button>
+        <button class="btn btn-warning" onclick="loadAjaxObjectiveForm({{ audit_id }});"> Add Objective </button>
+        <button class="btn btn-danger" onclick="loadAjaxRiskForm({{ audit_id }});"> Add Risk </button>
+        <button class="btn btn-info" onclick="loadAjaxControlForm({{ audit_id }});"> Add Control </button>
+        <button class="btn btn-success" onclick="loadAjaxTestForm({{ audit_id }});"> Add Test </button>
+    </div>
+    <br><br>
+    {% include 'audits/process_execute.html' %}
+<div class="col-md-5" id="right_panel"></div>
+</div>
+<script>
+    $(function(){
+      // bind change event to select
+      $('#audit_view').on('change', function () {
+          var view = $(this).val(); // get selected value
+          var url = "/audits/audit/"+{{audit_id}}+"/execute/"+view;
+          if (url) { // require a URL
+              window.location = url; // redirect
+          }
+          return false;
+      });
+    });
+</script>
+<script>
+function get_objectives(id, process_id){
+    $("#"+id).attr("onclick","");
+    var url = "/audits/audit/process/"+process_id+"/objective";
+    $.ajax({
+        url: url,
+        type: "GET",
+        dataType: "json",
+        data:{management:true},
+        success: function(result){
+            $("#acc_"+id).empty().append(result.html);
+        }
+    });
+}
+
+function get_risks(id, risk_id, process_id){
+    $("#"+id).attr("onclick","");
+    var url = "/audits/audit/objective/"+risk_id+"/risks";
+    $.ajax({
+        url: url,
+        type: "GET",
+        dataType: "json",
+        data:{process:process_id, management:true},
+        success: function(result){
+            $("#acc_"+id).empty().append(result.html);
+        }
+    });
+}
+
+
+function get_controls(id, controller_id, process_id, objective_id){
+    $("#"+id).attr("onclick","");
+    var url = "/audits/audit/risk/"+controller_id+"/controller";
+    $.ajax({
+        url: url,
+        type: "GET",
+        dataType: "json",
+        data:{process:process_id, objective: objective_id, management:true},
+        success: function(result){
+            $("#acc_"+id).empty().append(result.html);
+        }
+    });
+}
+
+function get_tests(id, test_id, process_id, objective_id, risk_id){
+    $("#"+id).attr("onclick","");
+    var url = "/audits/audit/control/"+test_id+"/test";
+    $.ajax({
+        url: url,
+        type: "GET",
+        dataType: "json",
+        data:{process:process_id, objective: objective_id,risk:risk_id,management:true},
+        success: function(result){
+            $("#acc_"+id).empty().append(result.html);
+        }
+    });
+}
+
+function loadAjaxProcessForm(audit_id, id){
+    if (id){
+        var url = "/audits/audit/"+audit_id+"/process/"+id+"/edit";
+    }
+    else {
+        var url = "/audits/audit/"+audit_id+"/process/add";
+    }
+    $.ajax({
+        url: url,
+        type: "GET",
+        dataType: "json",
+        success: function(result){
+            $("#right_panel").empty().append(result.html);
+        }
+    });
+}
+
+function saveAjaxProcessForm(audit_id, id){
+    var frm = $('#ajaxProcessForm');
+    if (id){
+        var edit = true;
+        var url = "/audits/audit/"+audit_id+"/process/"+id+"/edit";
+    }
+    else {
+        var edit = false;
+        var url = "/audits/audit/"+audit_id+"/process/add";
+    }
+
+    frm.ajaxSubmit({
+        url: url,
+        success: function(result) {
+            $('.ajaxformerror').empty();
+            if (result.status == 'success'){
+                if (edit){
+                    $("#right_panel").empty().append('<p>Process Updated successfully</p>');
+                    $(".process-title-"+id).empty().text(result.process_title);
+                    $(".process-desc-"+id).empty().text(result.process_desc);
+                }
+                else {
+                    $("#right_panel").empty().append('<p>Process Added successfully</p>');
+                    $("#accordion1").prepend(result.html);
+                }
+            }
+            else if(result.error){
+                if(result.error.title){
+                    $('#title_err').html(result.error.title);
+                }
+            }
+        },
+        error: function(){
+            alert('Unable to add/update Process');
+        }
+    });
+}
+
+function attachPaper(){
+    $(".workPapers").append('<div class="col-md-10"><input type="file" class="form-control" name="papers"></br></div>');
+}
+
+function removeAttachment(id) {
+    var url = "/audits/attachment/"+id+"/delete";
+    $.ajax({
+        type: 'GET',
+        url: url,
+        success: function() {
+            $("#workPaper_"+id).remove();
+        }
+    });
+}
+
+function deleteProcess(id) {
+    var url = "/audits/process/"+id+"/delete";
+    $.ajax({
+        type: 'GET',
+        url: url,
+        success: function() {
+            $("#pr_"+id).remove();
+            $("#prr_"+id).remove();
+            $("#right_panel").empty().append('<p>Process Deleted successfully</p>');
+        }
+    });
+}
+
+function loadAjaxObjectiveForm(audit_id, id){
+    if (id){
+        var url = "/audits/audit/"+audit_id+"/objective/"+id+"/edit";
+    }
+    else {
+        var url = "/audits/audit/"+audit_id+"/objective/add";
+    }
+    $.ajax({
+        url: url,
+        type: "GET",
+        dataType: "json",
+        success: function(result){
+            $("#right_panel").empty().append(result.html);
+        }
+    });
+}
+
+function saveAjaxObjectiveForm(audit_id, id){
+    var frm = $('#ajaxProcessForm');
+    if (id){
+        var edit = true;
+        var url = "/audits/audit/"+audit_id+"/objective/"+id+"/edit";
+    }
+    else {
+        var edit = false;
+        var url = "/audits/audit/"+audit_id+"/objective/add";
+    }
+
+    frm.ajaxSubmit({
+        url: url,
+        success: function(result) {
+            $('.ajaxformerror').empty();
+            if (result.status == 'success'){
+                if (edit){
+                    $("#right_panel").empty().append('<p>Objective Updated successfully</p>');
+                    $(".objective-modal-"+id).remove();
+                    $(".objective-list-"+id).remove();
+                }
+                else {
+                    $("#right_panel").empty().append('<p>Objective Added successfully</p>');
+                }
+                for (key in result.html){
+                    $("#"+key).prepend(result.html[key]);
+                }
+            }
+            else if(result.error){
+                if(result.error.title){
+                    $('#title_err').html(result.error.title);
+                }
+                if(result.error.process){
+                    $('#rel_err').html(result.error.process);
+                }
+            }
+        },
+        error: function(){
+            alert('Unable to add/update Objective');
+        }
+    });
+}
+
+function deleteObjective(id) {
+    var url = "/audits/objective/"+id+"/delete";
+    $.ajax({
+        type: 'GET',
+        url: url,
+        success: function() {
+            $(".objective-modal-"+id).remove();
+            $(".objective-list-"+id).remove();
+            $("#right_panel").empty().append('<p>Objective Deleted successfully</p>');
+        }
+    });
+}
+
+function loadAjaxRiskForm(audit_id, id){
+    if (id){
+        var url = "/audits/audit/"+audit_id+"/risk/"+id+"/edit";
+    }
+    else {
+        var url = "/audits/audit/"+audit_id+"/risk/add";
+    }
+    $.ajax({
+        url: url,
+        type: "GET",
+        dataType: "json",
+        success: function(result){
+            $("#right_panel").empty().append(result.html);
+        }
+    });
+}
+
+function saveAjaxRiskForm(audit_id, id){
+    var frm = $('#ajaxProcessForm');
+    if (id){
+        var edit = true;
+        var url = "/audits/audit/"+audit_id+"/risk/"+id+"/edit";
+    }
+    else {
+        var edit = false;
+        var url = "/audits/audit/"+audit_id+"/risk/add";
+    }
+
+    frm.ajaxSubmit({
+        url: url,
+        success: function(result) {
+            $('.ajaxformerror').empty();
+            if (result.status == 'success'){
+                if (edit){
+                    $("#right_panel").empty().append('<p>Risk Updated successfully</p>');
+                    $(".risk-modal-"+id).remove();
+                    $(".risk-list-"+id).remove();
+                }
+                else {
+                    $("#right_panel").empty().append('<p>Risk Added successfully</p>');
+                }
+                for (key in result.html){
+                    $("#"+key).prepend(result.html[key]);
+                }
+            }
+            else if(result.error){
+                if(result.error.title){
+                    $('#title_err').html(result.error.title);
+                }
+                if(result.error.objective){
+                    $('#rel_err').html(result.error.objective);
+                }
+            }
+        },
+        error: function(){
+            alert('Unable to add/update Risk');
+        }
+    });
+}
+
+function deleteRisk(id) {
+    var url = "/audits/risk/"+id+"/delete";
+    $.ajax({
+        type: 'GET',
+        url: url,
+        success: function() {
+            $(".risk-modal-"+id).remove();
+            $(".risk-list-"+id).remove();
+            $("#right_panel").empty().append('<p>Risk Deleted successfully</p>');
+        }
+    });
+}
+
+
+function loadAjaxControlForm(audit_id, id){
+    if (id){
+        var url = "/audits/audit/"+audit_id+"/control/"+id+"/edit";
+    }
+    else {
+        var url = "/audits/audit/"+audit_id+"/control/add";
+    }
+    $.ajax({
+        url: url,
+        type: "GET",
+        dataType: "json",
+        success: function(result){
+            $("#right_panel").empty().append(result.html);
+        }
+    });
+}
+
+function saveAjaxControlForm(audit_id, id){
+    var frm = $('#ajaxProcessForm');
+    if (id){
+        var edit = true;
+        var url = "/audits/audit/"+audit_id+"/control/"+id+"/edit";
+    }
+    else {
+        var edit = false;
+        var url = "/audits/audit/"+audit_id+"/control/add";
+    }
+
+    frm.ajaxSubmit({
+        url: url,
+        success: function(result) {
+            $('.ajaxformerror').empty();
+            if (result.status == 'success'){
+                if (edit){
+                    $("#right_panel").empty().append('<p>Control Updated successfully</p>');
+                    $(".control-modal-"+id).remove();
+                    $(".control-list-"+id).remove();
+                }
+                else {
+                    $("#right_panel").empty().append('<p>Control Added successfully</p>');
+                }
+                for (key in result.html){
+                    $("#"+key).prepend(result.html[key]);
+                }
+            }
+            else if(result.error){
+                if(result.error.title){
+                    $('#title_err').html(result.error.title);
+                }
+                if(result.error.risk){
+                    $('#rel_err').html(result.error.risk);
+                }
+            }
+        },
+        error: function(){
+            alert('Unable to add/update Control');
+        }
+    });
+}
+
+function deleteControl(id) {
+    var url = "/audits/control/"+id+"/delete";
+    $.ajax({
+        type: 'GET',
+        url: url,
+        success: function() {
+            $(".control-modal-"+id).remove();
+            $(".control-list-"+id).remove();
+            $("#right_panel").empty().append('<p>Control Deleted successfully</p>');
+        }
+    });
+}
+
+function loadAjaxTestForm(audit_id, id){
+    if (id){
+        var url = "/audits/audit/"+audit_id+"/test/"+id+"/edit";
+    }
+    else {
+        var url = "/audits/audit/"+audit_id+"/test/add";
+    }
+    $.ajax({
+        url: url,
+        type: "GET",
+        dataType: "json",
+        success: function(result){
+            $("#right_panel").empty().append(result.html);
+        }
+    });
+}
+
+function saveAjaxTestForm(audit_id, id){
+    var frm = $('#ajaxProcessForm');
+    if (id){
+        var edit = true;
+        var url = "/audits/audit/"+audit_id+"/test/"+id+"/edit";
+    }
+    else {
+        var edit = false;
+        var url = "/audits/audit/"+audit_id+"/test/add";
+    }
+
+    frm.ajaxSubmit({
+        url: url,
+        success: function(result) {
+            $('.ajaxformerror').empty();
+            if (result.status == 'success'){
+                if (edit){
+                    $("#right_panel").empty().append('<p>Test Updated successfully</p>');
+                    $(".test-list-"+id).remove();
+                }
+                else {
+                    $("#right_panel").empty().append('<p>Test Added successfully</p>');
+                }
+                for (key in result.html){
+                    $("#"+key).prepend(result.html[key]);
+                }
+            }
+            else if(result.error){
+                if(result.error.title){
+                    $('#title_err').html(result.error.title);
+                }
+                if(result.error.control){
+                    $('#rel_err').html(result.error.control);
+                }
+            }
+        },
+        error: function(){
+            alert('Unable to add/update Test');
+        }
+    });
+}
+
+function deleteTest(id) {
+    var url = "/audits/test/"+id+"/delete";
+    $.ajax({
+        type: 'GET',
+        url: url,
+        success: function() {
+            $(".test-list-"+id).remove();
+            $("#right_panel").empty().append('<p>Test Deleted successfully</p>');
+        }
+    });
+}
+</script>
+{% endblock %}

@@ -1,0 +1,30 @@
+.. index:: Control
+
+Control
+==========
+
+A control may be associated with many risks (many to many relation). When creating a control, it has to be associated to atleast one :doc:`risk`.
+
+Each control can have many :doc:`test` s.
+
+A control has six basic aspects:
+
+* Title
+   This field has a maximum of 200 characters.
+* Reference
+   This field has a maximum of 200 characters.
+* Description
+   This is a regular text field where there is no limit to the number of characters.
+* Control Type
+   There is no formal definition of the types of controls in an audit. GRC Envelop uses the two most common types:
+
+   * Key control : these controls are considered the most important controls for which there has to be significant testing
+   * Secondary control : these controls are usually provided as extra assurance for key controls. Testing for these controls are not usually significant.
+
+* Risk
+   A control has to be associated to atleast one :doc:`risk`.
+* Work papers
+   Work papers are attachments or file uploads where you can keep files associated to a control. 
+
+.. include:: file_size_warning.rst
+

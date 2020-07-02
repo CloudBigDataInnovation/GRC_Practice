@@ -1,0 +1,22 @@
+.. index:: Process
+
+Process
+=========
+
+All businesses are assumed to be a series of processes. A process is the highest level that can be stored in the audits module. Process is the highest level of audit related information in a firm. There can be numerous processes. 
+
+Each process can have many :doc:`objective` s.
+
+A process has 4 basic aspects:
+
+* Title
+   This field has a maximum of 200 characters.
+* Reference
+   This field has a maximum of 200 characters.
+* Description
+   This is a regular text field where there is no limit to the number of characters.
+* Work papers
+   Work papers are attachments or file uploads where you can keep files associated to a process. 
+
+.. include:: file_size_warning.rst
+

@@ -1,0 +1,13 @@
+<div class="panel panel-warning risk-list-{{ obj.id }}">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a id="pro_{{ process_id }}_obj_{{ objective_id }}_risk_{{ obj.id }}" data-toggle="collapse" data-parent="#acc_process_{{process_id}}_obj_{{ objective_id }}" href="#pr_{{process_id}}_obj_{{ objective_id }}_rs_{{obj.id}}_collapse" onclick="get_controls('pro_'+{{ process_id }}+'_obj_'+{{ objective_id }}+'_risk_'+{{ obj.id }}, {{ obj.id }}, {{ process_id }}, {{ objective_id }})">+
+            </a><a href="javascript:void(0);" onclick="loadAjaxRiskForm({{ obj.audit_id }}, {{ obj.id }})">{{ obj.title }}</a>
+        </h4>
+    </div>
+    <div id="pr_{{process_id}}_obj_{{objective_id}}_rs_{{ obj.id }}_collapse" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="panel-group" id="acc_pro_{{ process_id }}_obj_{{ objective_id }}_risk_{{ obj.id }}"></div>
+        </div>
+    </div>
+</div>

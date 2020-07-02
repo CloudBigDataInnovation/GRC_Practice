@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+{% block page_title %}Create/Modify Audit{% endblock %}
+{% block header_html %}
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+{% endblock %}
+
+{% block content %}
+<div class="col-md-12">
+    <div class="col-md-6">
+        <h2>Create/Modify an Audit</h2>
+
+        <form method="POST" class="post-form" enctype="multipart/form-data" class="form-horizontal">
+        {% csrf_token %}
+            {% if messages %}
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            {% endif %}
+
+            <div class="fieldWrapper">
+            {{ form.title.label_tag }} <br>
+            {{ form.title }}
+            {{ form.title.errors }}
+            </div>
+            <div class="fieldWrapper">
+            {{ form.desc.label_tag }} <br>
+            {{ form.desc }}
+            {{ form.desc.errors }}
+        </div>
+        <div class="fieldWrapper">
+            {{ form.status.label_tag }} <br>
+            {{ form.status }}
+            {{ form.status.errors }}
+            </div>
+            <div class="fieldWrapper">
+            {{ form.start_date.label_tag }} <br>
+            {{ form.start_date }}
+            {{ form.start_date.errors }}
+            </div>
+        <div class="fieldWrapper date-picker">
+            {{ form.end_date.label_tag }} <br>
+            {{ form.end_date }}
+            {{ form.end_date.errors }}
+            </div>
+          <div class="fieldWrapper">
+            {{ form.fy.label_tag }} <br>
+            {{ form.fy }}
+            {{ form.fy.errors }}
+            </div>
+<br><br>
+
+            
+
+    </div>
+    <div class="col-md-6">
+    	{% if form.instance.id %}
+		<div class="row">
+	        <div class="col-sm-3">
+	        	{% if form.instance.status == 'CL' %}
+	        		<a href="#" onClick="alert('Audit is closed!')" class="btn btn-default btn-lg">Execute audit</a>
+				{% else %}
+	        		<a href="{% url 'audits:audit_execute' form.instance.id 'process' %}" class="btn btn-info btn-lg">Execute audit</a>
+	        	{% endif %}
+	        </div>
+	        <div class="col-sm-3">
+ 				<a href="{% url 'audits:audit_report' form.instance.id %}" target="_blank" class="btn btn-success btn-lg">Generate Report</a>
+	        </div>
+        </div> 
+        <hr>
+
+        <div class="row">
+	        <fieldset>
+	        <legend>Process, Objective, Risk, Control, Test</legend>
+	        	<button type="submit" class="save btn btn-default" name="add_manually">Add/Modify manually</button>
+	        </fieldset>
+        </div>
+         {% endif %}
+         
+         <div class="row">
+         	&nbsp;
+         </div>
+
+        <div class="row workPapers">
+        <fieldset>
+            <legend>Work Papers</legend>
+            {% if form.instance and form.instance.papers.all.0 %}
+            {% with form.instance.papers.all as papers %}
+            {% for paper in papers %}
+            <div class="col-md-12" id="workPaper_{{ paper.id }}">
+                <a href="{{paper.workpaper.url}}" target="_blank">{{paper.filename}}</a><button type="button" onclick="removeAttachment({{ paper.id }})" class="btn btn-xs pull-right">Remove</button>
+                <br><br>
+            </div>
+            {% endfor %}
+            {% endwith %}
+            {% endif %}
+            <div class="col-md-10"><input type="file" class="form-control" name="papers"></div>
+        </div>
+        	<button type="button" class="btn btn-info" onclick="attachPaper();">Attach 1 more</button> 
+        </fieldset>
+
+         <div class="row">
+         	&nbsp;
+         </div>
+
+         <div class="row text-center">
+
+         	<button type="submit" class="save btn btn-primary" name="save">Save Audit</button><button type="submit" class="btn btn-danger" name="delete">Delete</button>
+         </div>
+                     
+    </div>
+    </form>  
+
+</div>
+<script>
+    var options={
+        format: 'yyyy-mm-dd',
+        todayHighlight: true,
+        autoclose: true,
+    };
+    $('#id_end_date').datepicker(options);
+    $('#id_start_date').datepicker(options);
+
+
+function attachPaper(){
+    $(".workPapers").append('<div class="col-md-10"><input type="file" class="form-control" name="papers"></br></div>');
+}
+
+function removeAttachment(id) {
+    var url = "/audits/attachment/"+id+"/delete";
+    $.ajax({
+        type: 'GET',
+        url: url,
+        success: function() {
+            $("#workPaper_"+id).remove();
+        }
+    });
+}
+</script>
+<script type="text/javascript">
+        $('.btn-danger').click(function (e){
+            if (!confirm('Do you really want to delete the Audit?')){
+                e.preventDefault();
+            }
+        });
+    </script>
+{% endblock %}

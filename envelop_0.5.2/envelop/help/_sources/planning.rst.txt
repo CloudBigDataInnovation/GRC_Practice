@@ -1,0 +1,17 @@
+.. index:: Planning
+
+Planning
+==========================
+
+Planning is a view that shows all the audits this is present in a given month. You can page between months using the left and right arrow buttons.
+
+.. index:: Lifecycle
+
+Lifecycle
++++++++++++++
+The planning view introduces the concept of audit lifecycle. There are 3 stages that is available in Envelop (Community Version)
+
+*  Draft (Gray #AAAAAA)
+*  Active (Green #00BB00)
+*  Closed (Blue #0000BB)
+

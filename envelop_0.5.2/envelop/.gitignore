@@ -1,0 +1,6 @@
+*.pyc
+__pycache__
+.DS_Store
+db - Copy.sqlite3
+envelop/settings.py
+/envelop/settings.py

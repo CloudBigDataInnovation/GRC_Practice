@@ -1,0 +1,37 @@
+{% if objectives %}
+{% for obj in objectives %}
+<div class="modal fade objective-modal-{{ obj.id }}" id="md_pr_{{ process_id }}_obj_{{ obj.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title objective-title-{{ obj.id }}">{{ obj.title }}</h4>
+      </div>
+      <div class="modal-body">
+        {{ obj.ref_id }}
+      </div>
+      <div class="modal-body objective-desc-{{ obj.id }}">
+        {{ obj.desc }}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-warning objective-list-{{ obj.id }}">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a id="pro_{{ process_id }}_obj_{{ obj.id }}" data-toggle="collapse" data-parent="#acc_process_{{process_id}}" href="#pr_{{process_id}}_obj_{{ obj.id }}_collapse" onclick="get_risks('pro_'+{{ process_id }}+'_obj_'+{{ obj.id }}, {{ obj.id }}, {{ process_id }})">+</a> 
+            <a href="javascript:void(0);" {% if management %} onclick="loadAjaxObjectiveForm({{ obj.audit_id }}, {{ obj.id }})" {% else %} data-toggle="modal" data-target="#md_pr_{{ process_id }}_obj_{{ obj.id }}" {% endif %} class="objective-title-{{ obj.id }}">{{ obj.title }}</a>
+        </h4>
+    </div>
+    <div id="pr_{{process_id}}_obj_{{ obj.id }}_collapse" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="panel-group" id="acc_pro_{{process_id}}_obj_{{ obj.id }}"></div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endif %}

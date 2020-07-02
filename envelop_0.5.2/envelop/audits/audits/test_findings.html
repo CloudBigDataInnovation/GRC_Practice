@@ -1,0 +1,27 @@
+{% if findings %}
+{% for obj in findings %}
+<div class="modal fade" id="md_pr_{{ process_id }}_obj_{{objective_id}}_rs_{{risk_id}}_ct_{{control_id}}_ts_{{test_id}}_fn_{{ obj.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">{{ obj.title }}</h4>
+      </div>
+      <div class="modal-body">
+        {{ obj.desc }}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a href="javascript:void(0);" data-toggle="modal" data-target="#md_pr_{{ process_id }}_obj_{{objective_id}}_rs_{{risk_id}}_ct_{{control_id}}_ts_{{test_id}}_fn_{{ obj.id }}">{{ obj.title }}</a>
+        </h4>
+    </div>
+</div>
+{% endfor %}
+{% endif %}

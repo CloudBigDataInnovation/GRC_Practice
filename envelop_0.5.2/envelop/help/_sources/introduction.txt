@@ -1,0 +1,15 @@
+Introduction to GRC Envelop
+===========================
+
+
+GRC Envelop is a web-based work flow and document storage tool specific for the **risk**, **audit** and **control environments**. This tool is mainly used for internal and external audits focused on financial, IT, HR and sales processes within firms.
+
+This tools falls under a broad category of services called GRC which stands for governance, risk and compliance.
+
+Envelop is modelled using a basic workflow that starts from a business :doc:`audits/process`.
+
+.. index:: Data Structure
+.. image:: _static/data_structure.png
+    :align: center
+    :alt: Data Structure of Envelop
+

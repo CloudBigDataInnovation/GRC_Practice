@@ -1,0 +1,11 @@
+Process
+=======================================
+
+All businesses are assumed to be a series of processes. A process is the highest level that can be stored in the audits module. A process has 2 basic aspects:
+
+* Title
+   This field has a maximum of 200 characters.
+* Description
+
+.. note::
+   The description field is a general text fields that can accept large amounts of text. However, formatting is not preserved.
